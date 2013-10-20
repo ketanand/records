@@ -41,4 +41,30 @@ Controller:
   - www.movies.com/movies/upload  ## page to upload products using a csv file
   - www.movies.com/movies/product/<id> ## product page 
 
+DB: 
+	Table : movies (group_id, product_id, movie_title, category, sub_category, store, price, shipping_description )
+	All products are uploaded to this table:
+	upload scripts checks if group_id is empty is yes adds to by extracting it from product_id.
+
+###################################
+
+Usage :
+
+ - Search for movie titles with keywords are separated by space. exact matches are displayed first followed by partial matches.
+
+###################################
+
+Note:
+
+All model , view and controller classes can be found inside ../application/
+
+###################################
+
+TroubleShooting:
+
+ - For large CSV files, HTTP 413 error comes which can be fixed by increasing the client request body size paramenter.
+	For example : in nginx add client_max_body_size 2M; to nginx.conf in http block.
+ 
+
+
 
