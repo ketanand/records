@@ -1,0 +1,44 @@
+#############################
+Unbxd Store Front Assignment
+#############################
+
+Setup Procedure:
+
+1) Setup Mysql DB using db_setup.sql
+2) Create user 'unbxd' with password 'valyoo123'  and grant all writes.
+   ## CREATE USER 'unbxd'@'%' IDENTIFIED BY 'valyoo123';
+   ## GRANT ALL ON movies.* to 'unbxd'@'%';
+
+
+3) Create a virtual host with server name www.movies.com , and point document root the downloaded code.
+
+
+##############################
+Design:
+
+- Store front is created on codeingiter MVC framework.
+- Following is the brief description of various components
+
+Models:
+
+ - Product : Provides functions to search for products based on query param, load product by id, load related products (products having same group id)
+
+ - Product/Uploader : Class which facilitates uploading products to store using a csv.
+
+Views:
+ 
+ -Homepage : basic store front page, with search bar to search for products
+ -Search_Result : Page which displays search results
+ -Product_page : Product details page 
+
+Controller:
+
+ Application works on a single controller class 'Movies' 
+
+ Following are the various possible routes
+ 
+  - www.movies.com ##home page
+  - www.movies.com/movies/upload  ## page to upload products using a csv file
+  - www.movies.com/movies/product/<id> ## product page 
+
+
