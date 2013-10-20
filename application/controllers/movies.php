@@ -12,6 +12,9 @@ class Movies extends CI_Controller {
 		$data['result'] = false;
 		if (!empty($_POST['q'])){
 			$data['result'] = $this->product->search($_POST['q']);
+		}else {
+			echo 'please enter a search term';
+			return;
 		}
 		$this->load->view('search_result', $data);
 	}
@@ -22,7 +25,7 @@ class Movies extends CI_Controller {
 		if ($mainProduct){
 			$relatedProduct = $this->product->getRelatedProducts($mainProduct['group_id']);
 		}else {
-			header("HTTP/1.1 404 Not Found");
+			show_404();
 		}
 		$data['product'] = $mainProduct;
 		$data['related'] = $relatedProduct;
