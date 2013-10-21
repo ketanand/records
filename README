@@ -58,6 +58,11 @@ Note:
 
 All model , view and controller classes can be found inside ../application/
 
+Model Product has been created so that product objects can be created and passed to different modules for different operations.
+Similarly a collection can be created as a container of product obejcts.
+
+Current application only uses product model for its functions, Product objects are not being used for sake of simplicity.
+
 ###################################
 
 TroubleShooting:
