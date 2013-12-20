@@ -4,7 +4,10 @@ class Movies extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('home_page');
+		$data = array(
+   				'title' => 'RecordsTree.com'
+    			);
+		$this->template->load('default', 'homepage', $data);
 	}
 
 	public function search(){
