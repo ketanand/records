@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Movies extends CI_Controller {
+class Records extends CI_Controller {
 
 	public function index()
 	{
@@ -52,8 +52,7 @@ class Movies extends CI_Controller {
 	}
 
 	public function test(){
-		$this->load->model('product');
-		$this->product->getById('MV12UN0001-1');
+		echo 'test successful';
 	}
 
 
