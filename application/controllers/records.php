@@ -64,7 +64,7 @@ class Records extends CI_Controller {
 			$data['items'] = $chartItems;
 			$this->template->load('charts', 'list', $data, 'sidebar');
 		}else {
-			echo "chart not found"; 
+			show_404();
 		}
 	}
 
