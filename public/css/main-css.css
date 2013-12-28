@@ -1331,3 +1331,43 @@ text-decoration: none; border-radius: 5px 5px 0px 0; -moz-border-radius: 5px 5px
 ul.primary li.active a { background-color: #fff; border: 1px solid #bbb; border-bottom: 1px solid #fff; }
 
 ul.primary li a:hover { background-color: #eee; border-color: #ccc; border-bottom-color: #eee; }
+
+
+/*charts*/
+
+.charts-item-intro { width:20%; height:175px; padding-left: 10px; padding-right:10px; padding: 20px 10px 10px; float:left;}
+.charts-item-desc { width:100% height:175px; float:left; padding-left: 10px; padding-right:10px; padding: 20px 10px 10px;}
+.chart-place {  border: 3px solid #1A1A1A; border-radius: 45px 45px 45px 45px; font-size: 22px; height: 45px; line-height: 45px; margin: 10px 10px 15px; position: relative; text-align: center; width: 45px; background-color: SpringGreen; float:left}
+.chart-play { float:left; font-size:20px; margin-left:15px; margin-top:20px;}
+.chart-item-img {display:block }
+
+ul#chart-list { width: 100%; min-height: 175px; overflow: hidden; margin-left: 0;}
+
+li#charts-item { min-height: 175px; overflow: hidden; margin-left: 0; }
+.chart-title { color: #898989; font-size: 14px; text-transform: uppercase; margin-bottom: 2px; display:block; width:100%}
+.chart-title a { color: #898989;}
+
+
+
+/* Featured Videos */
+
+.featured-video-ul  { margin:0; padding:0; border:0; outline:0; font-size:12px;  background:transparent; font-size:12px; font-family: Arial, sans-serif;}
+
+.carousel { position:relative;  min-height: 30px; height:auto !important; height: 20px;  background:url(images/loader.gif) center center no-repeat; }
+			.carousel .next,
+			.carousel .prev { display:none; width:56px; height:56px; position:absolute; bottom:20px; left:50%; margin-top:-28px; z-index:9999; cursor:pointer; }
+			.carousel .prev { margin-left:-60px; background:url(images/prev.png) 0 0 no-repeat;  }
+			.carousel .next { margin-right:-60px;  background:url(images/next.png) 0 0 no-repeat; }
+			.carousel li img { width:94%; height:auto; border: medium none; max-width:136%}
+			.paging { position:absolute; z-index:9998; }
+			.paging > a { display:block; cursor:pointer; width:40px; height:40px; float:left; background:url(images/dots.png) 0px -40px no-repeat; }
+			.paging > a:hover,
+			.paging > a.current { background:url(images/dots.png) 0px 0px no-repeat;  }
+			.badge { display:block; width:104px; height:104px; background:url(images/badge.png) 0 0 no-repeat; z-index:9000; position:absolute; top:-3px; left:-3px; }
+ol, ul, li { list-style:none; }	
+
+.wrap { padding:0px; }		
+.wrapper { position:relative; margin:0px auto; padding:0px 20px 0px 20px; max-width:1200px; }
+.wrapper.wrapper-tabs { margin-top:20px; margin-bottom:20px;  }
+.wrapper.wrapper-tabs > div { background:#fbfbfb; padding:0px 20px 0px 20px;  -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; border:1px solid #bfbfbf; }
+#bottom-content { margin-left:20px;}
