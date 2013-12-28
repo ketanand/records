@@ -1380,3 +1380,46 @@ ol, ul, li { list-style:none; }
 .wrapper.wrapper-tabs > div { background:#fbfbfb; padding:0px 20px 0px 20px;  -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; border:1px solid #bfbfbf; }
 #bottom-content { margin-left:20px;}
 
+/*********************************/
+/**SIDEBAR *******/
+/*********************************/
+
+#sidebar {width:225px;}
+
+/* ---------------------------------------------------------------------- */
+/* 15- Charts Highlights
+/* ---------------------------------------------------------------------- */
+
+.charts-highlights { float:left; margin: 0 auto; position: relative; width: 225px; }
+
+.portion_chart_summary { height: 80px;  width: 223px; border: 1px solid #D8D8D8; padding: 20px 0 20px; position: relative;}
+
+.portion_chart_summary p { font-size: 12px; line-height: 20px; margin-left : 10px}
+
+.chart-title { float:left; color: #FC666A; font-size: 14px; text-transform: uppercase; margin-bottom: 2px; display:block; width:100%}
+	
+.chart-title a { color: #F33747;}
+
+.portion_chart_summary p a { color: black; display:block;}
+
+.chart-highlight-left { width:auto; float:left; padding-left: 10px; padding-right:10px; padding: 20px 10px 10px;}
+
+.chart-highlight-right { width:auto; float:left; text-align:center; padding-left: 10px; padding-top:10px}
+.chart-highlight-right b { display:block; }
+.chart-highlight-right a { color: black; display:block;}
+
+.chart-highlight-left .chart-place-gain {  border: 3px solid #1A1A1A; border-radius: 45px 45px 45px 45px; display: inline-block; font-size: 22px; height: 45px; line-height: 45px; margin: 0 0 15px; position: relative; text-align: center; width: 45px; background-color: SpringGreen;}
+
+.chart-highlight-left .chart-place-loss {  border: 3px solid #1A1A1A; border-radius: 45px 45px 45px 45px; display: inline-block; font-size: 22px; height: 45px; line-height: 45px; margin: 0 0 15px; position: relative; text-align: center; width: 45px; background-color: Red;}
+
+.chart-highlight-left .chart-place-same {  border: 3px solid #1A1A1A; border-radius: 45px 45px 45px 45px; display: inline-block; font-size: 22px; height: 45px; line-height: 45px; margin: 0 0 15px; position: relative; text-align: center; width: 45px; background-color: lightBlue;}
+
+
+
+/**Related Content ***/
+.related-content { float:left; margin: 0 auto; position: relative; width: 225px; }
+.related-article-title {color: #1A1A1A; display: block; font-family: 'BrownStd-Regular',Helvetica,Arial,sans-serif; font-size: 17px;   font-weight: normal; height: 60px; letter-spacing: 2px; line-height: 20px; overflow: hidden; padding-left: 104px; text-decoration: none; z-index:10;}
+.related-item-img {border: 1px solid #CCCCCC; display: block; height: 55px; left: 0; overflow: hidden; position: absolute; top: 0; width: 83px; opacity:1; width:auto;}
+
+.related-content-summary-item {border-bottom: 1px solid #E6E6E6; display: block; margin: 0 0 14px; min-height: 56px; padding: 0 0 18px;   position: relative;}
+
