@@ -25,7 +25,11 @@
 		        private $height;
 			private $imageResized;
 
-			function __construct($fileName)
+			function __construct()
+			{
+			}
+
+			public function load($fileName)
 			{
 				// *** Open up the file
 				$this->image = $this->openImage($fileName);
@@ -34,7 +38,6 @@
 			    $this->width  = imagesx($this->image);
 			    $this->height = imagesy($this->image);
 			}
-
 			## --------------------------------------------------------
 
 			private function openImage($file)
