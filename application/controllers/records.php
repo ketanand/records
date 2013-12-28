@@ -18,6 +18,22 @@ class Records extends CI_Controller {
 		$this->template->load('charts', 'list', $data, 'sidebar');
 	}
 
+        public function charts($name){
+		$data = array(
+   				'title' => 'RecordsTree.com',
+    			);
+		$this->load->model('chart');
+		$chart = $this->chart->loadByName($name);
+		if ($chart){
+			$chartItems = $chart->getList();
+			$data['title'] = $this->chart->getData('title');
+			$data['items'] = $chartItems;
+			$this->template->load('charts', 'list', $data, 'sidebar');
+		}else {
+			echo "chart not found"; 
+		}
+	}
+
 	public function search(){
 		$this->load->model('product');
 		$data['result'] = false;
@@ -31,6 +47,8 @@ class Records extends CI_Controller {
 	}
 
 	public function product($id){
+		echo $id;
+		exit;
 		$this->load->model('product');
 		$mainProduct = $this->product->getById($id);
 		if ($mainProduct){

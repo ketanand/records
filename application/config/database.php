@@ -66,7 +66,7 @@ $db['default']['stricton'] = FALSE;
 
 $db['records']['hostname'] = 'localhost';
 $db['records']['username'] = 'records';
-$db['records']['password'] = 'valyoo123';
+$db['records']['password'] = 'records@321';
 $db['records']['database'] = 'treedb';
 $db['records']['dbdriver'] = 'mysql';
 $db['records']['dbprefix'] = '';
