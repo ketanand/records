@@ -15,7 +15,7 @@
 		            directionNav: 1,
 		            animationLoop: true,
 		            touch: 1,
-		            pauseOnHover: 1,
+		            pauseOnHover: 0,
 		            nextText: "&rsaquo;",
 		            prevText: "&lsaquo;",
 		            keyboard: true,

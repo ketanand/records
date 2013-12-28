@@ -39,7 +39,7 @@
                         <!-- #main-navigation -->                        
                         <nav id="main-navigation" class="main-menu clearfix" role="navigation">
 	                        <ul class="menu">
-					<li class="first leaf"><a href="http://recordstree.com/top100" title="">Top 100</a></li>
+					<li class="first leaf"><a href="http://www.recordstree.com:8081/records/charts/top100" title="">Top 100</a></li>
 					<li class="leaf"><a href="http://recordstree.com/records50" title="">Records 50</a></li>
 					<li class="leaf"><a href="http://recordstree.com/artistoftheweek" title="">Artist of the week</a></li>
 					<li class="expanded"><a href="http://recordstree.com/genres" title="">Genres</a>
