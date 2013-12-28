@@ -33,7 +33,7 @@
          	<!-- #page -->
          	<div id="page">
 	 		<?php echo $header; ?>
-			<div id="content">
+			<div id="content" class="container clearfix">
 				<div id="main-content">
 			 		<?php echo $content; ?>
 				</div>

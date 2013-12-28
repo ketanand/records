@@ -124,7 +124,7 @@ img { max-width: 100%; height: auto;
 /*-----------------------------------------------------------*/
 /*-------------------- SOCIAL ICONS --------------------------*/
 /*-----------------------------------------------------------*/
-#social-icons { position: relative; padding: 10px 0 8px 0; font-size: 0;}
+#social-icons { position: relative; padding: 10px 0 8px 0; font-size: 0; width:62%;}
 
 ul#social-links { z-index: 1; margin: 0px; list-style: none; float: right; }
 
@@ -1010,7 +1010,7 @@ ul#portfolio-items-one-third li  img { width: 100%; height: auto; padding: 0; ma
 /* 13- BLOG LAYOUT
 /* ---------------------------------------------------------------------- */
 
-#content h1 { margin-bottom: 30px; }
+#content h1 { margin-bottom: 5px; }
 
 .hentry { padding: 0 0 30px 0; margin: 0 0 30px 0; }
 
@@ -1333,10 +1333,16 @@ ul.primary li.active a { background-color: #fff; border: 1px solid #bbb; border-
 ul.primary li a:hover { background-color: #eee; border-color: #ccc; border-bottom-color: #eee; }
 
 
+
+
+
 /*charts*/
 
-.charts-item-intro { width:20%; height:175px; padding-left: 10px; padding-right:10px; padding: 20px 10px 10px; float:left;}
-.charts-item-desc { width:100% height:175px; float:left; padding-left: 10px; padding-right:10px; padding: 20px 10px 10px;}
+#main-content { width:700px; float:left;}
+#sidebar {float:left; }
+
+.charts-item-intro { width:180px; height:175px; padding-left: 10px; padding-right:10px; padding: 20px 10px 10px; float:left;}
+.charts-item-desc { width:50% height:175px; float:left; padding-left: 10px; padding-right:10px; padding: 20px 10px 10px;}
 .chart-place {  border: 3px solid #1A1A1A; border-radius: 45px 45px 45px 45px; font-size: 22px; height: 45px; line-height: 45px; margin: 10px 10px 15px; position: relative; text-align: center; width: 45px; background-color: SpringGreen; float:left}
 .chart-play { float:left; font-size:20px; margin-left:15px; margin-top:20px;}
 .chart-item-img {display:block }
@@ -1346,7 +1352,9 @@ ul#chart-list { width: 100%; min-height: 175px; overflow: hidden; margin-left: 0
 li#charts-item { min-height: 175px; overflow: hidden; margin-left: 0; }
 .chart-title { color: #898989; font-size: 14px; text-transform: uppercase; margin-bottom: 2px; display:block; width:100%}
 .chart-title a { color: #898989;}
-
+.charts-item-desc h1 { font-size: 24px; line-height: 28px; margin: 0 0 2px;  padding: 0; font-family:Arial,sans-serif;}
+.charts-content h3 {text-align:center;}
+.charts-sidebar { float:left;}
 
 
 /* Featured Videos */
@@ -1371,3 +1379,4 @@ ol, ul, li { list-style:none; }
 .wrapper.wrapper-tabs { margin-top:20px; margin-bottom:20px;  }
 .wrapper.wrapper-tabs > div { background:#fbfbfb; padding:0px 20px 0px 20px;  -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; border:1px solid #bfbfbf; }
 #bottom-content { margin-left:20px;}
+
