@@ -64,21 +64,23 @@ $db['default']['swap_pre'] = '';
 $db['default']['autoinit'] = TRUE;
 $db['default']['stricton'] = FALSE;
 
-$db['movies']['hostname'] = 'localhost';
-$db['movies']['username'] = 'unbxd';
-$db['movies']['password'] = 'valyoo123';
-$db['movies']['database'] = 'movies';
-$db['movies']['dbdriver'] = 'mysql';
-$db['movies']['dbprefix'] = '';
-$db['movies']['pconnect'] = TRUE;
-$db['movies']['db_debug'] = TRUE;
-$db['movies']['cache_on'] = FALSE;
-$db['movies']['cachedir'] = '';
-$db['movies']['char_set'] = 'utf8';
-$db['movies']['dbcollat'] = 'utf8_general_ci';
-$db['movies']['swap_pre'] = '';
-$db['movies']['autoinit'] = TRUE;
-$db['movies']['stricton'] = FALSE;
+$db['records']['hostname'] = 'localhost';
+$db['records']['username'] = 'records';
+$db['records']['password'] = 'valyoo123';
+$db['records']['database'] = 'treedb';
+$db['records']['dbdriver'] = 'mysql';
+$db['records']['dbprefix'] = '';
+$db['records']['pconnect'] = TRUE;
+$db['records']['db_debug'] = TRUE;
+$db['records']['cache_on'] = FALSE;
+$db['records']['cachedir'] = '';
+$db['records']['char_set'] = 'utf8';
+$db['records']['dbcollat'] = 'utf8_general_ci';
+$db['records']['swap_pre'] = '';
+$db['records']['autoinit'] = TRUE;
+$db['records']['stricton'] = FALSE;
+
+
 
 
 /* End of file database.php */

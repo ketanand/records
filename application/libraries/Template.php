@@ -15,12 +15,16 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
          $this->ci =& get_instance();
       }
 
-	function load($tpl_view, $body_view = null, $data = null) 
+	function load($tpl_view, $body_view = null, $data = null, $sidebar = null) 
 	{
 	   $data['css'] = $this->ci->load->view(self::CSS_PATH, $data, TRUE);
 	   $data['scripts'] = $this->ci->load->view(self::JS_PATH, $data, TRUE);
 	   $data['head'] = $this->ci->load->view(self::HEAD_PATH, $data, TRUE);
 	   $data['header'] = $this->ci->load->view(self::HEADER_PATH, $data, TRUE);
+
+	   if ($sidebar != null){
+		$data['sidebar'] = $this->ci->load->view($sidebar, $data, TRUE);
+	   }
 	   
 	   if ( ! is_null( $body_view ) ) 
 	   {

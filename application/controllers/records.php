@@ -10,6 +10,14 @@ class Records extends CI_Controller {
 		$this->template->load('default', 'homepage', $data);
 	}
 
+	public function top100(){
+		$data = array(
+   				'title' => 'RecordsTree.com',
+				'id' => 1
+    			);
+		$this->template->load('charts', 'list', $data, 'sidebar');
+	}
+
 	public function search(){
 		$this->load->model('product');
 		$data['result'] = false;
