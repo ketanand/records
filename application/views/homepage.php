@@ -175,226 +175,112 @@
     
                     </div>
 	</div><!-- EOF #featured -->
-         <!-- #bottom-content -->
-            <div id="bottom-content" class="container clearfix">
+         <!-- #charts -->
+            <div id="bottom-content">
+	<h3>Featured Videos</h3>
+    	<div class="wrapper">
+	<div class="carousel" data-mixed="">
+		<a class="prev" data-prev="" ></a>
+		<ul class="featured-video-ul">
+		<li>
+			<div class="wrap">
+				<a class="various fancybox.iframe" href="http://www.youtube.com/embed/<?php print $page['featured_videos'][0]['id'] ;?>?autoplay=1">
+				<figure>
+					<img src="http://img.youtube.com/vi/<?php print $page['featured_videos'][0]['id'] ;?>/0.jpg">
+				</figure>
+				</a>
+				
+			</div>
+		</li>
+		<li>
+			<div class="wrap">
+				<a class="various fancybox.iframe" href="http://www.youtube.com/embed/<?php print $page['featured_videos'][1]['id'] ;?>?autoplay=1">
+				<figure>
+					<img src="http://img.youtube.com/vi/<?php print $page['featured_videos'][1]['id'] ;?>/0.jpg">
+				</figure>
+				</a>
+			</div>
+		</li>
+		<li>
+			<div class="wrap">
+				<a class="various fancybox.iframe" href="http://www.youtube.com/embed/<?php print $page['featured_videos'][2]['id'] ;?>?autoplay=1">
+				<figure>
+					<img src="http://img.youtube.com/vi/<?php print $page['featured_videos'][2]['id'] ;?>/0.jpg" >
+				</figure>
+				</a>
+			</div>
+		</li>
+		<li>
+			<div class="wrap">
+				<a class="various fancybox.iframe" href="http://www.youtube.com/embed/<?php print $page['featured_videos'][3]['id'] ;?>?autoplay=1">
+				<figure>
+					<img src="http://img.youtube.com/vi/<?php print $page['featured_videos'][3]['id'] ;?>/0.jpg">
+				</figure>
+				</a>
+			</div>
+		</li>
+		<li>
+			<div class="wrap">
+				<a class="various fancybox.iframe" href="http://www.youtube.com/embed/<?php print $page['featured_videos'][4]['id'] ;?>?autoplay=1">
+				<figure>
+					<img src="http://img.youtube.com/vi/<?php print $page['featured_videos'][4]['id'] ;?>/0.jpg">
+				</figure>
+				</a>
+			</div>
+		</li>
+		<li>
+			<div class="wrap">
+				<a class="various fancybox.iframe" href="http://www.youtube.com/embed/<?php print $page['featured_videos'][5]['id'] ;?>?autoplay=1">
+				<figure>
+					<img src="http://img.youtube.com/vi/<?php print $page['featured_videos'][5]['id'] ;?>/0.jpg">
+				</figure>
+				</a>
+			</div>
+		</li>
+		<li>
+			<div class="wrap">
+				<a class="various fancybox.iframe" href="http://www.youtube.com/embed/<?php print $page['featured_videos'][6]['id'] ;?>?autoplay=1">
+				<figure>
+					<img src="http://img.youtube.com/vi/<?php print $page['featured_videos'][6]['id'] ;?>/0.jpg">
+				</figure>
+				</a>
+			</div>
+		</li>
+		</ul>
+		<a class="next" data-next="" style="display: inline;"></a>
+		<a class="badge"></a>	
+	</div>
+	</div>
 
-                
-                                        
-					  
-                    
-                    <h3>This weeks Featured Videos!</h3>
-                    
-                    <ul id="projects-carousel" class="loading">
-    
-                        <!-- PROJECT ITEM STARTS -->
-                        <li>
-                            <div class="item-content">
-                                <div class="link-holder">
-                                    <div class="portfolio-item-holder">
-                                        <div class="portfolio-item-hover-content">
-    
-                                            <a href="/public/images/portfolio-img-1.jpg" title="title" data-rel="prettyPhoto" class="zoom">View Image</a>
-                                            
-                                           <img src="/public/images/pt-img1.jpg" alt="" width="220"  class="portfolio-img" />  
-                                            
-                                            <div class="hover-options"></div>
-                                        </div>
-                                    </div>
-                                    <div class="description">
-                                        <p>
-                                            <a href="#" title="title"> BlackBerry Website Project</a>
-                                        </p>
-                                        <span>Web</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <!-- PROJECT ITEM ENDS -->
-    
-                        <!-- PROJECT ITEM STARTS -->
-                        <li>
-                            <div class="item-content">
-                                <div class="link-holder">
-                                    <div class="portfolio-item-holder">
-                                        <div class="portfolio-item-hover-content">
-    
-                                            <a href="/public/images/portfolio-img-2.jpg" title="title" data-rel="prettyPhoto" class="zoom">View Image</a>
-                                            
-                                            <img src="/public/images/pt-img2.jpg" alt="" width="220" class="portfolio-img" />
-    
-                                            <div class="hover-options"></div>
-                                        </div>
-                                    </div>
-                                    <div class="description">
-                                        <p>
-                                            <a href="#" title="title"> Vestibulum ante ipsum primis</a>
-                                        </p>
-                                        <span>Illustration</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <!-- PROJECT ITEM ENDS -->
-    
-                        <!-- PROJECT ITEM STARTS -->
-                        <li>
-                            <div class="item-content">
-                                <div class="link-holder">
-                                    <div class="portfolio-item-holder">
-                                        <div class="portfolio-item-hover-content">
-    
-                                            <a href="/public/images/portfolio-img-3.jpg" title="title" data-rel="prettyPhoto" class="zoom">View Image</a>
-                                            
-                                            <img src="/public/images/pt-img3.jpg" alt="" width="220" class="portfolio-img" />
-    
-                                            <div class="hover-options"></div>
-                                        </div>
-                                    </div>
-                                    <div class="description">
-                                        <p>
-                                            <a href="#" title="title"> Nulla mollis fermentum nunc</a>
-                                        </p>
-                                        <span>Illustration</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <!-- PROJECT ITEM ENDS -->
-    
-                        <!-- PROJECT ITEM STARTS -->
-                        <li>
-                            <div class="item-content">
-                                <div class="link-holder">
-                                    <div class="portfolio-item-holder">
-                                        <div class="portfolio-item-hover-content">
-    
-                                            <a href="/public/images/portfolio-img-4.jpg" title="title" data-rel="prettyPhoto" class="zoom">View Image</a>
-                                            
-                                            <img src="/public/images/pt-img4.jpg" alt="" width="220" class="portfolio-img" />
-                                            
-                                            <div class="hover-options"></div>
-                                        </div>
-                                    </div>
-                                    <div class="description">
-                                        <p>
-                                            <a href="#" title="title"> Cras vel orci sapien</a>
-                                        </p>
-                                        <span>Illustration / Web</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <!-- PROJECT ITEM ENDS -->
-    
-                         <!-- PROJECT ITEM STARTS -->
-                        <li>
-                            <div class="item-content">
-                                <div class="link-holder">
-                                    <div class="portfolio-item-holder">
-                                        <div class="portfolio-item-hover-content">
-    
-                                            <a href="/public/images/portfolio-img-5.jpg" title="title" data-rel="prettyPhoto" class="zoom">View Image</a>
-                                            
-                                            <img src="/public/images/pt-img5.jpg" alt="" width="220" class="portfolio-img" />
-                                            
-                                            <div class="hover-options"></div>
-                                        </div>
-                                    </div>
-                                    <div class="description">
-                                        <p>
-                                            <a href="#" title="title">Curabitur nisl libero</a>
-                                        </p>
-                                        <span>Illustration / Web</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <!-- PROJECT ITEM ENDS -->
-    
-                        <!-- PROJECT ITEM STARTS -->
-                        <li>
-                            <div class="item-content">
-                                <div class="link-holder">
-                                    <div class="portfolio-item-holder">
-                                        <div class="portfolio-item-hover-content">
-    
-                                            <a href="/public/images/portfolio-img-1.jpg" title="title" data-rel="prettyPhoto" class="zoom">View Image</a>
-                                            
-                                            <img src="/public/images/pt-img1.jpg" alt="" width="220" class="portfolio-img" />
-                                            
-                                            <div class="hover-options"></div>
-                                        </div>
-                                    </div>
-                                    <div class="description">
-                                        <p>
-                                            <a href="#" title="title"> BlackBerry Website Project</a>
-                                        </p>
-                                        <span>Web</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <!-- PROJECT ITEM ENDS -->
-    
-                        <!-- PROJECT ITEM STARTS -->
-                        <li>
-                            <div class="item-content">
-                                <div class="link-holder">
-                                    <div class="portfolio-item-holder">
-                                        <div class="portfolio-item-hover-content">
-    
-                                            <a href="/public/images/portfolio-img-2.jpg" title="title" data-rel="prettyPhoto" class="zoom">View Image</a>
-                                            
-                                            <img src="/public/images/pt-img2.jpg" alt="" width="220" class="portfolio-img" />
-                                            
-                                            <div class="hover-options"></div>
-                                        </div>
-                                    </div>
-                                    <div class="description">
-                                        <p>
-                                            <a href="#" title="title"> Vestibulum ante ipsum primis</a>
-                                        </p>
-                                        <span>Illustration</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <!-- PROJECT ITEM ENDS -->
-    
-                        <!-- PROJECT ITEM STARTS -->
-                        <li>
-                            <div class="item-content">
-                                <div class="link-holder">
-                                    <div class="portfolio-item-holder">
-                                        <div class="portfolio-item-hover-content">
-    
-                                            <a href="/public/images/portfolio-img-3.jpg" title="title" data-rel="prettyPhoto" class="zoom">View Image</a>
-                                            
-                                            <img src="/public/images/pt-img3.jpg" alt="" width="220" class="portfolio-img" />
-                                            
-                                            <div class="hover-options"></div>
-                                        </div>
-                                    </div>
-                                    <div class="description">
-                                        <p>
-                                            <a href="#" title="title"> Nulla mollis fermentum nunc</a>
-                                        </p>
-                                        <span>Illustration</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <!-- PROJECT ITEM ENDS -->
-    
-                    </ul>
-    
-                    <!-- // optional "view full portfolio" button on homepage featured projects -->
+
                     <a href="#" class="colored" title="portofolio">View full portofolio</a> 
-               
-                
-              
-            
+<script type="text/javascript">
+			$('.carousel[data-mixed] ul').anoSlide(
+			{
+				items: 5,
+				speed: 500,
+				prev: 'a.prev[data-prev]',
+				next: 'a.next[data-next]',
+				lazy: true,
+				delay: 100
+			});
+			$('.featured-video-ul').css("height","207px");
+			$(document).ready(function() {
+			$(".various").fancybox({
+				maxWidth	: 800,
+				maxHeight	: 600,
+				fitToView	: false,
+				width		: '100%',
+				height		: '100%',
+				autoSize	: false,
+				closeClick	: false,
+				openEffect	: 'none',
+				closeEffect	: 'none'
+			});
+			});
+		</script>
             </div>
             <!-- EOF: #bottom-content -->
+   	
 	
 </div>

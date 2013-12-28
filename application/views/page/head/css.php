@@ -14,6 +14,7 @@
 <style type="text/css" media="all">
 @import url("http://www.recordstree.com:8081/public/css/plugins/prettyPhoto.css");
 @import url("http://www.recordstree.com:8081/public/css/shortcodes/buttons.css");
+@import url("http://www.recordstree.com:8081/public/css/plugins/fancybox.css");
 </style>
 <style type="text/css" media="all">
 @import url("http://www.recordstree.com:8081/public/css/main-css.css");

@@ -6,3 +6,5 @@
 <script type="text/javascript" src="http://www.recordstree.com:8081/public/js/plugins/jquery.tipsy.js"></script>
 <script type="text/javascript" src="http://www.recordstree.com:8081/public/js/plugins/jquery.prettyPhoto.js"></script>
 <script type="text/javascript" src="http://www.recordstree.com:8081/public/js/plugins/jquery.mobilemenu.min.js"></script>
+<script type="text/javascript" src="/public/js/plugins/jquery.anoslide.js"></script>
+<script type="text/javascript" src="/public/js/plugins/fancybox.js"></script>
