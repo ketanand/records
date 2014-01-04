@@ -40,6 +40,12 @@
 
 $route['default_controller'] = "records";
 $route['404_override'] = '';
+$route['blogs'] = "blogs";
+$route['blogs/(:num)'] = "blogs/view/$1";
+$route['news'] = "news";
+$route['news/(:num)'] = "news/view/$1";
+$route['artistoftheweek'] = "records/artist";
+
 
 
 /* End of file routes.php */

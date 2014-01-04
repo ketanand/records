@@ -1,11 +1,10 @@
 <div class="related-content">
-<?php if($page['charts_highlights']) :?>
+<?php if($highlights) :?>
 	    <h3> Related News/Articles </h3>
 	    <ul id="related-content-summary" class="related-content-summary">	 	
-	    <?php foreach($page['charts_highlights'] as $related) :?>
+	    <?php foreach($highlights as $related) :?>
 	    	<li id="related-content-summary-item" class="related-content-summary-item">
-		<img class="related-item-img" id="chart-item-img" src="http://www.billboard.com/files/media/skate-and-surf-escape-the-fate-650-430.jpg" width="85px"/>
-		<a class="related-article-title" title="Sex on the Beach>" href="/sex-on-the-beach">Sex On The Beach</a>
+		<a class="related-article-title" title="Sex on the Beach>" href="/sex-on-the-beach"><img class="related-item-img" id="chart-item-img" src="http://www.billboard.com/files/media/skate-and-surf-escape-the-fate-650-430.jpg" width="85px"/>Sex On The Beach</a>
 		</li>
   	    <?php endforeach;?>
 	    </ul>	
@@ -13,10 +12,10 @@
 
 </div>
 <div class ="charts-highlights">	
-	    <?php if($page['charts_highlights']) :?>
+	    <?php if($highlights) :?>
 	    <h3> Charts Highlights </h3> 	
-	    <?php foreach($page['charts_highlights'] as $highlight) :?>		
-            <div class="chart-highlights">
+	    <?php foreach($highlights as $highlight) :?>		
+            	<div class="chart-highlights">
 		<div id="chart-ajax">
 			<section class="portion_chart_summary" style="display: block;">
 			
@@ -34,7 +33,8 @@
 			</div>
 			
 			</section>
-</div>
-<?php endforeach;?>	
+		</div>
+		</div>
+		<?php endforeach;?>	
 	    <?php endif; ?>
 </div>	

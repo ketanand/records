@@ -44,103 +44,56 @@ class Records extends CI_Controller {
 		$this->template->load('default', 'homepage', $data);
 	}
 
-	public function top100(){
-		$data = array(
-   				'title' => 'RecordsTree.com',
-				'id' => 1
-    			);
-		$this->template->load('charts', 'list', $data, 'sidebar');
-	}
-
-        public function charts($name){
+	
+        public function charts($name, $page = null){
 		$data = array(
    				'title' => 'RecordsTree.com',
     			);
-		$data['page']['charts_highlights'] = array(
-					'0' => array(
-							'chart' => 'Bollywood',
-							'chart_link' => '/bollywood',
-							'chart_position' => '12',
-							'track_behaviour' => 'loss',
-							'track_title' => 'Tum Hi Ho',
-							'track_artist' => 'Arijit Singh'
-						    ),		
-					'1' => array(
-							'chart' => 'Fusion',
-							'chart_link' => '/fusion',
-							'chart_position' => '3',
-							'track_behaviour' => 'gain',
-							'track_title' => 'Jhankaar',
-							'track_artist' => 'Foonkh'
-						    ),	
-					'2' => array(
-							'chart' => 'Punjabi',
-							'chart_link' => '/punjabi',
-							'chart_position' => '1',
-							'track_behaviour' => 'same',
-							'track_title' => 'Blue Eyes',
-							'track_artist' => 'Honey Singh'
-						    ),	
-				);
-		//$this->load->model('chart');
-		//$chart = $this->chart->loadByName($name);
-		if (1){//$chart){
-			//$chartItems = $chart->getList();
-			//$data['title'] = $this->chart->getData('title');
-			//$data['items'] = $chartItems;
+		$this->load->model('chart');
+		$chart = $this->chart->loadByName($name);
+		if ($chart){
+			$totalPages = $chart->getTotalPages();
+			$data['nextPage'] = false;
+			$data['prevPage'] = false;
+			if (($page == null) || ($page < 2)){
+				$data['curPage'] = 1;
+				$page = 1;
+				if ($totalPages > 1){
+					$data['nextPage'] = 2;
+				}
+			}else if ($page >= $totalPages){
+				$page = $totalPages;
+				$data['curPage'] = $totalPages;
+				$data['prevPage'] = $totalPages - 1;
+			}else {
+				$data['curPage'] = $page;
+				$data['nextPage'] = $page + 1;
+				$data['prevPage'] = $page - 1;
+			}
+			$chartItems = $chart->getList($page);
+			$data['title'] = $this->chart->getData('title');
+			$data['items'] = $chartItems;
+			$data['highlights'] = $chart->getChartHighlights();
 			$this->template->load('charts', 'list', $data, 'sidebar');
 		}else {
 			show_404();
 		}
 	}
 
-	public function search(){
-		$this->load->model('product');
-		$data['result'] = false;
-		if (!empty($_POST['q'])){
-			$data['result'] = $this->product->search($_POST['q']);
+        public function videos(){
+
+	}
+
+	public function search($query){
+		if (!empty($query)){
+			$this->load->model('search');
+			$data['results'] = $this->search->getResults(urlDecode($query));
 		}else {
-			echo 'please enter a search term';
+			echo "please enter a search term";
 			return;
 		}
-		$this->load->view('search_result', $data);
+		$this->template->load('charts', 'search_results', $data, 'sidebar');
 	}
-
-	public function product($id){
-		echo $id;
-		exit;
-		$this->load->model('product');
-		$mainProduct = $this->product->getById($id);
-		if ($mainProduct){
-			$relatedProduct = $this->product->getRelatedProducts($mainProduct['group_id']);
-		}else {
-			show_404();
-		}
-		$data['product'] = $mainProduct;
-		$data['related'] = $relatedProduct;
- 		$this->load->view('product_page', $data);
-	}
-	
-	public function upload(){
-		$this->load->view('upload');
-	}
-
-	public function uploader(){
-		$this->load->model('product/uploader', 'uploader');
-		$this->uploader->upload();
-	}
-
-	public function success(){
-		$html = 'Products were uploaded successfully <br /><br />';
-		$html .= '<a href="/" >Search Movies</a> <br />';
-		$html .= '<a href="/movies/upload" >Upload More Products</a> <br />';
-		echo $html;		
-	}
-
-	public function test(){
-		echo 'test successful';
-	}
-
 
 }
 
