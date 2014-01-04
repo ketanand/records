@@ -64,7 +64,6 @@ class Product extends CI_Model{
 				$this->db->like("movie_title" , mysql_real_escape_string($term));
 				$count++;
 			}
-			
 		}
 		$this->db->group_by('group_id');
 		$query = $this->db->get('movies');
