@@ -93,6 +93,132 @@ class Records extends CI_Controller {
 			show_404();
 		}
 	}
+	
+	public function video(){
+		$data = array(
+   				'title' => 'RecordsTree.com',
+    			);
+		$data['page']['charts_highlights'] = array(
+					'0' => array(
+							'chart' => 'Bollywood',
+							'chart_link' => '/bollywood',
+							'chart_position' => '12',
+							'track_behaviour' => 'loss',
+							'track_title' => 'Tum Hi Ho',
+							'track_artist' => 'Arijit Singh'
+						    ),		
+					'1' => array(
+							'chart' => 'Fusion',
+							'chart_link' => '/fusion',
+							'chart_position' => '3',
+							'track_behaviour' => 'gain',
+							'track_title' => 'Jhankaar',
+							'track_artist' => 'Foonkh'
+						    ),	
+					'2' => array(
+							'chart' => 'Punjabi',
+							'chart_link' => '/punjabi',
+							'chart_position' => '1',
+							'track_behaviour' => 'same',
+							'track_title' => 'Blue Eyes',
+							'track_artist' => 'Honey Singh'
+						    ),	
+				);
+		//$this->load->model('chart');
+		//$chart = $this->chart->loadByName($name);
+		if (1){//$chart){
+			//$chartItems = $chart->getList();
+			//$data['title'] = $this->chart->getData('title');
+			//$data['items'] = $chartItems;
+			$this->template->load('video', 'video', $data, 'sidebar','video_banner');
+		}else {
+			show_404();
+		}
+	}
+	
+	public function blogs(){
+		$data = array(
+   				'title' => 'RecordsTree.com',
+    			);
+		$data['page']['charts_highlights'] = array(
+					'0' => array(
+							'chart' => 'Bollywood',
+							'chart_link' => '/bollywood',
+							'chart_position' => '12',
+							'track_behaviour' => 'loss',
+							'track_title' => 'Tum Hi Ho',
+							'track_artist' => 'Arijit Singh'
+						    ),		
+					'1' => array(
+							'chart' => 'Fusion',
+							'chart_link' => '/fusion',
+							'chart_position' => '3',
+							'track_behaviour' => 'gain',
+							'track_title' => 'Jhankaar',
+							'track_artist' => 'Foonkh'
+						    ),	
+					'2' => array(
+							'chart' => 'Punjabi',
+							'chart_link' => '/punjabi',
+							'chart_position' => '1',
+							'track_behaviour' => 'same',
+							'track_title' => 'Blue Eyes',
+							'track_artist' => 'Honey Singh'
+						    ),	
+				);
+		//$this->load->model('chart');
+		//$chart = $this->chart->loadByName($name);
+		if (1){//$chart){
+			//$chartItems = $chart->getList();
+			//$data['title'] = $this->chart->getData('title');
+			//$data['items'] = $chartItems;
+			$this->template->load('video', 'blogs', $data, 'sidebar');
+		}else {
+			show_404();
+		}
+	}
+	
+	public function news(){
+		$data = array(
+   				'title' => 'RecordsTree.com',
+    			);
+		$data['page']['charts_highlights'] = array(
+					'0' => array(
+							'chart' => 'Bollywood',
+							'chart_link' => '/bollywood',
+							'chart_position' => '12',
+							'track_behaviour' => 'loss',
+							'track_title' => 'Tum Hi Ho',
+							'track_artist' => 'Arijit Singh'
+						    ),		
+					'1' => array(
+							'chart' => 'Fusion',
+							'chart_link' => '/fusion',
+							'chart_position' => '3',
+							'track_behaviour' => 'gain',
+							'track_title' => 'Jhankaar',
+							'track_artist' => 'Foonkh'
+						    ),	
+					'2' => array(
+							'chart' => 'Punjabi',
+							'chart_link' => '/punjabi',
+							'chart_position' => '1',
+							'track_behaviour' => 'same',
+							'track_title' => 'Blue Eyes',
+							'track_artist' => 'Honey Singh'
+						    ),	
+				);
+		//$this->load->model('chart');
+		//$chart = $this->chart->loadByName($name);
+		if (1){//$chart){
+			//$chartItems = $chart->getList();
+			//$data['title'] = $this->chart->getData('title');
+			//$data['items'] = $chartItems;
+			$this->template->load('video', 'news', $data, 'sidebar');
+		}else {
+			show_404();
+		}
+	}
 
 	public function search(){
 		$this->load->model('product');

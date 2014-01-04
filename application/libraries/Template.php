@@ -15,7 +15,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
          $this->ci =& get_instance();
       }
 
-	function load($tpl_view, $body_view = null, $data = null, $sidebar = null) 
+	function load($tpl_view, $body_view = null, $data = null, $sidebar = null,$banner=null) 
 	{
 	   $data['css'] = $this->ci->load->view(self::CSS_PATH, $data, TRUE);
 	   $data['scripts'] = $this->ci->load->view(self::JS_PATH, $data, TRUE);
@@ -26,6 +26,10 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 		$data['sidebar'] = $this->ci->load->view($sidebar, $data, TRUE);
 	   }
 	   
+	   if ($banner != null){
+		$data['banner'] = $this->ci->load->view($banner, $data, TRUE);
+	   }
+
 	   if ( ! is_null( $body_view ) ) 
 	   {
 	      if ( file_exists( APPPATH.'views/'.$tpl_view.'/'.$body_view ) ) 
