@@ -28,7 +28,7 @@ class News extends AbstractModel{
 		}else{
 			$offset = 0;
 		}
-		$sql = "SELECT * FROM news LIMIT ?, ?;";
+		$sql = "SELECT title, main_img, short_description, created_at FROM news LIMIT ?, ?;";
 		$query = $this->db->query($sql,array($offset, $this->_itemsPerPage));
 		$collection = $query->result_array();
 		if (count($collection) > 0){

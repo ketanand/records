@@ -29,9 +29,8 @@ class News extends CI_Controller {
 			$data['nextPage'] = $page + 1;
 			$data['prevPage'] = $page - 1;
 		}
-		$data['blogs'] = $this->news->getList($page);
-		//TODO : Initialize correct templates
-		$this->template->load('charts', 'news', $data, 'sidebar');
+		$data['news'] = $this->news->getList($page);
+		$this->template->load('video', 'news', $data, 'sidebar');
 	}
 
 	public function view($id){

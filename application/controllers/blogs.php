@@ -30,8 +30,7 @@ class Blogs extends CI_Controller {
 			$data['prevPage'] = $page - 1;
 		}
 		$data['blogs'] = $this->blog->getList($page);
-		//TODO : Initialize correct templates
-		$this->template->load('charts', 'blog', $data, 'sidebar');
+		$this->template->load('video', 'blogs', $data, 'sidebar');
 	}
 
 	public function view($id){

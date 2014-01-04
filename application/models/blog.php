@@ -45,7 +45,7 @@ class Blog extends AbstractModel{
 		}else{
 			$offset = 0;
 		}
-		$sql = "SELECT * FROM blogs LIMIT ?, ?;";
+		$sql = "SELECT title,main_img,short_description, author, created_at FROM blogs LIMIT ?, ?;";
 		$query = $this->db->query($sql,array($offset, $this->_itemsPerPage));
 		$collection = $query->result_array();
 		if (count($collection) > 0){
