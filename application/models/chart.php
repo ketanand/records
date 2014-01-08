@@ -4,7 +4,9 @@ class Chart extends AbstractModel{
 
 	private $_items = null;
 
-	private $_itemsPerPage = 10;
+	private $_itemsPerPage = 4;
+
+	private $_totalItems;
 
 	function __construct(){
 		parent::__construct();
@@ -44,17 +46,30 @@ class Chart extends AbstractModel{
 		return $this->_items;
 	}
 
+	function getItemsPerPage(){
+		return $this->_itemsPerPage;
+	}
+
 	function getTotalPages(){
 		if ($id = $this->getData('id')){
 			$sql = "SELECT count(*) as count FROM chart_item WHERE chart_id = ?";
 			$query = $this->db->query($sql, array($id));
 			$collection = $query->result_array();
 			$count = $collection[0]['count'];
+			$this->_totalItems = $count;
+			if (($count % $this->_itemsPerPage) != 0)
 			$pages = (int)($count / $this->_itemsPerPage ) + 1;
+			else 
+			$pages = $count / $this->_itemsPerPage;
+
 			return $pages;
 		}else {
 			throw new Exception("Chart not initialized");
 		}
+	}
+
+	function getTotalItemsCount(){
+		return $this->_totalItems;
 	}
 
         function getChartHighlights(){

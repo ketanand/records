@@ -40,10 +40,12 @@
 
 $route['default_controller'] = "records";
 $route['404_override'] = '';
-$route['blogs'] = "blogs";
-$route['blogs/(:num)'] = "blogs/view/$1";
-$route['news'] = "news";
-$route['news/(:num)'] = "news/view/$1";
+$route['blogs'] = "blogs_news";
+$route['blogs/page/(:num)'] = "blogs_news/page/$1";
+$route['blogs/view/(:num)'] = "blogs_news/view/$1";
+$route['news'] = "blogs_news/news/1";
+$route['news/page/(:num)'] = "blogs_news/news/$1";
+$route['news/view/(:num)'] = "blogs_news/newsitem/$1";
 $route['artistoftheweek'] = "records/artist";
 
 

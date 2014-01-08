@@ -53,23 +53,51 @@ class Records extends CI_Controller {
 		$chart = $this->chart->loadByName($name);
 		if ($chart){
 			$totalPages = $chart->getTotalPages();
+			$data['totalPages'] = $totalPages;
+			$data['totalItems'] = $chart->getTotalItemsCount();
+			$itemsPerPage = $chart->getItemsPerPage();
 			$data['nextPage'] = false;
 			$data['prevPage'] = false;
 			if (($page == null) || ($page < 2)){
 				$data['curPage'] = 1;
+				$data['curPageRange'] = '1-' . $itemsPerPage;
 				$page = 1;
 				if ($totalPages > 1){
 					$data['nextPage'] = 2;
+					$start = (($data['nextPage'] - 1) * $itemsPerPage) + 1;
+					$end = ($start - 1) + $itemsPerPage;
+					$data['nextPageRange'] = $start . '-' .  $end;
 				}
 			}else if ($page >= $totalPages){
 				$page = $totalPages;
 				$data['curPage'] = $totalPages;
 				$data['prevPage'] = $totalPages - 1;
+				//calculating current page range
+				$start = (($data['curPage'] - 1) * $itemsPerPage) + 1;
+				$end = $data['totalItems'];
+				$data['curPageRange'] = $start . '-' .  $end;
+				//calculating previous page range
+				$start = (($data['prevPage'] - 1) * $itemsPerPage) + 1;
+				$end = ($start - 1) + $itemsPerPage;
+				$data['prevPageRange'] = $start . '-' .  $end;
 			}else {
 				$data['curPage'] = $page;
 				$data['nextPage'] = $page + 1;
 				$data['prevPage'] = $page - 1;
+				//calculating current page range
+				$start = (($data['curPage'] - 1) * $itemsPerPage) + 1;
+				$end = ($start - 1) + $itemsPerPage;
+				$data['curPageRange'] = $start . '-' .  $end;
+				//calculating next page range
+				$start = (($data['nextPage'] - 1) * $itemsPerPage) + 1;
+				$end = ($start - 1) + $itemsPerPage;
+				$data['nextPageRange'] = $start . '-' .  $end;
+				//calculating prev page range
+				$start = (($data['prevPage'] - 1) * $itemsPerPage) + 1;
+				$end = ($start - 1) + $itemsPerPage;
+				$data['prevPageRange'] = $start . '-' .  $end;
 			}
+			$data['chartName'] = $name;
 			$chartItems = $chart->getList($page);
 			$data['title'] = $this->chart->getData('title');
 			$data['items'] = $chartItems;

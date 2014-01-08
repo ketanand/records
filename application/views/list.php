@@ -19,21 +19,25 @@
 </header>
 	<div class="pagination">
 			<ul class="page-numbers">
+				<?php if($prevPage): ?>
 				<li>
-					<a class="prev page-numbers" href="<?php echo $_SERVER['REQUEST_URI'] ;?>"><i class="icon-chevron-left"></i></a>
+					<a class="prev page-numbers" href="<?php echo 'http://' . $_SERVER['HTTP_HOST'] . '/records/charts/' . $chartName; ?>"><i class="icon-chevron-left"></i></a>
 				</li>
 				<li>
-					<a href="<?php echo $_SERVER['REQUEST_URI'].'/1'?>" class="page-numbers">1-10</a>
+					<a href="<?php echo 'http://' . $_SERVER['HTTP_HOST'] . '/records/charts/' . $chartName . '/' . $prevPage; ?>" class="page-numbers"><?php echo $prevPageRange; ?></a>
+				</li>
+				<?php endif; ?>
+				<li>
+					<span class="page-numbers current"><?php echo $curPageRange; ?></span>
+				</li>
+				<?php if ($nextPage): ?>
+				<li>
+					<a href="<?php echo 'http://' . $_SERVER['HTTP_HOST'] . '/records/charts/' . $chartName . '/' . $nextPage; ?>" class="page-numbers"><?php echo $nextPageRange; ?></a>
 				</li>
 				<li>
-					<span class="page-numbers current">11-20</span>
+					<a class="prev page-numbers" href="<?php echo 'http://' . $_SERVER['HTTP_HOST'] . '/records/charts/' . $chartName . '/' . $totalPages; ?>"><i class="icon-chevron-right"></i></a>
 				</li>
-				<li>
-					<a href="<?php echo $_SERVER['REQUEST_URI'].'/3' ;?>" class="page-numbers">21-30</a>
-				</li>
-				<li>
-					<a class="prev page-numbers" href="http://aksgar.com/"><i class="icon-chevron-right"></i></a>
-				</li>		
+				<?php endif; ?>		
 			</ul>
 		</div>
 <div id="main-content">

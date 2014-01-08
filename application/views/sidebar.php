@@ -12,10 +12,10 @@
 
 </div>
 <div class="related-video">
-<?php if($page['charts_highlights']) :?>
+<?php if($highlights) :?>
 	    <h3> Related Videos </h3>
 	    <ul id="related-video-summary" class="related-video-summary">	 	
-	    <?php foreach($page['charts_highlights'] as $related) :?>
+	    <?php foreach($highlights as $related) :?>
 	    	<li id="related-video-summary-item" class="related-video-summary-item">
 		<a class="related-video-title" title="Sex on the Beach>" href="/sex-on-the-beach"><img class="related-video-img" id="chart-item-img" src="http://www.billboard.com/files/media/skate-and-surf-escape-the-fate-650-430.jpg" width="85px"/>Sex On The Beach</a>
 		</li>
