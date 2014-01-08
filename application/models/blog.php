@@ -1,5 +1,5 @@
 <?php
-require_once('abstract.php');
+require_once(APPPATH . 'models/abstract.php');
 class Blog extends AbstractModel{
 
 	private $_comments = null;

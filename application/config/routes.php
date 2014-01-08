@@ -47,6 +47,8 @@ $route['news'] = "blogs_news/news/1";
 $route['news/page/(:num)'] = "blogs_news/news/$1";
 $route['news/view/(:num)'] = "blogs_news/newsitem/$1";
 $route['artistoftheweek'] = "records/artist";
+$route['blogs/comment'] = "blogs_news/comment";
+$routn['blogs/getcomment/(:num)'] = "blogs_news/getComment/$1";
 
 
 

@@ -99,5 +99,38 @@ class Blogs_News extends CI_Controller {
 		}
 	}
 
+	public function comment(){
+		$blogId = $this->input->post('id');
+		$comment = $this->security->xss_clean($this->input->post('comment'));
+		$name = $this->security->xss_clean($this->input->post('name'));
+		$comment = $this->load->model('blog/comment');
+		$comment->setData('comment', $comment);
+		$comment->setData('name', $name);
+		$comment->setData('blog_id', $blogId);
+		$result = $comment->save();
+		if (is_array($result)){
+			$reponse['status'] = 'error';
+			$response['error_data'] = $result;
+		}else {
+			$response['status'] = 'success';
+			$response['data'] = $comment->getData();
+		}
+		header('content-type : application/json');
+		echo json_encode($response);
+	}
+
+	public function getComment($id){
+		$comment = $this->load->model('blog/comment');
+		$data = $comment->loadByBlogId($id);
+		if ($data){
+			$response['status'] = 'success';
+			$response['data'] = $data;
+		}else{
+			$response['status'] = 'error';
+		}
+		header('content-type : application/json');
+		echo json_encode($response);
+	}
+
 }
 ?>
