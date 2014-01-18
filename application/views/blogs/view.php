@@ -163,43 +163,15 @@
     </aside>
      	    
     <aside id="related">
-	<div class="line">
-  	<div class="related-wrap one-full portions">
-     	    <div class="OUTBRAIN" data-widget-id="AR_1" data-ob-template="coexist" data-src="http://www.fastcoexist.com/3024333/this-artist-has-added-the-missing-truth-to-gorgeous-ads-for-luxury-products" data-ob-mark="true" data-dynload="" id="outbrain_widget_0">
-		<div class="ob_strip_container AR_1">
-		<span class="ob_org_header"><h5>YOU MIGHT ALSO LIKE</h5></span>	    
-		<div class="ob_container">
-		<div class="ob_container_recs">
-			<?php foreach($blogs['related'] as $rel):?>
-                        	<a class="item-link-container ob-odd" href="<?php echo $rel['link']; ?>" target="_self" rel="">
-    				   <div class="item-container ob-recIdx-0   item-container-obpd">
-        				<div class="ob-rec-link-img ob-tcolor">
-    						<img class="strip-img" style="" width="138" height="138" src="<?php echo $rel['img_src']; ?>" >
-    					</div>
-				        <div class="obpd ob-bgtcolor" onclick="outbrain.callWhatIs('NA','',-1,-1,true,null);return false">
-		FROM THE WEB
-		</div>
-				        <div class="ob-text-content">
-                                  	    <div class="strip-rec-link-title ob-tcolor"><?php echo $rel['title']; ?></div>
-        				    <div class="strip-rec-link-source ob-lcolor">
-        					<span class="ob_source"><?php echo $rel['src']; ?></span>    
-					    </div>
-    					</div>
-				  </div>
-				</a>
-			<?php endforeach;?>
-		</div>		
-		</div>
-		</div>
-	    </div>
-	   </div>	
-       </aside>
-       	<section id="comments-publish">
+		
+    </aside>
+       	
+	<section id="comments-publish">
 	    <div id="comments-form">
 		<div id="comment-reply" class="comment-reply">
 		    <div class="comment-form-header clearfix">
 		      	<h3>Add New Comment</h3>
-			<?php if(1): /**check if already logged in**/ ?>
+			<?php if(!$this->session->userdata('logged_in')): /**check if already logged in**/ ?>
 			<button class="account-login" name="login">Log In</button>
 			<?php else:?>
 				<ul class="account-dd">
@@ -227,38 +199,72 @@
 	</div>
 
 	<div id="comments-content" data-set-newest="" data-set-oldest="" data-total="0" data-is-closed="">
-	    <div class="comment-list-header"><div class="container-in">
-		<h3 class="comment-count">
-		    <span class="comment-num"><?php echo $blogs['number_of_comments'];?></span> <span class="comment-num-text">Comments</span>
-		</h3>
-	    </div>
+	    
 	</div>
 
-    	<div class="comment-list"><div class="container-in"><ul class="comment-list ">
-  	<?php if($blogs['number_of_comments'] == 0){ ?>
-	<div class="list-empty"><span>No comments yet. Be the first!</span></div>
-	<?php }else{
-		foreach($blogs['comments'] as $item):		
-	?>
-	<li class="comment-item">
-	<div id="comment-<?php echo $item['id'];?>" class="container-in indent-0 ">
-	  <article data-comment-id="<?php echo $item['id'];?>" data-thread-key="fastcoexist:3021967" data-depth="0" data-is-hidden="" class="comment clearfix">
-	    <header>
-	      <span class="author name" data-author-provider="facebook" data-author-name="<?php echo $item['comment_author'];?>" data-author-screen-name="<?php echo $item['comment_author_screen_name'];?>"><?php echo $item['comment_author'];?></span>
-	      <span class="parent-author"><?php echo $item['comment_parent_author'];?></span>
-	      <time class="datess" data-created-at="<?php echo $item['created_at'];?>" datetime="<?php echo $item['created_at'];?>" title="<?php echo $item['created_at'];?>"><a href="#comment-<?php echo $item['id'];?>">2 days ago</a></time>
-	    </header>
-	    <span class="text node-article"><p><?php echo $item['text'];?></p>
-	    </span>
-	  </article>   
-	</div>
-	</li>
-	<?php endforeach; }?>	
-	</ul>
-	</div></div>
+	<script type="text/javascript" >
+		var blogId = 1; //TODO: echo blog id here
+		jQuery(window).load(function(){
+
+			//get Comments
+			jQuery.ajax({
+				type:"GET",
+				dataType : 'json',
+				url: "http://" + window.location.host + "/blogs_news/getcomment/" + blogId,
+				success: function(response){
+				    if(response.success){
+					var html = '';
+					html += "<div class='comment-list-header'><div class='container-in'><h3 class='comment-count'>	    <span class='comment-num'>" + response.data.count + "</span><span class='comment-num-text'>Comments</span></h3>    </div>";
+					html += "<div id='id-comments' class='comment-list'><div class='container-in'><ul class='comment-list' >";
+					if (response.data.count){
+						for(var i = 0; i < response.data.count; i++){
+							html += "<li class='comment-item'><div id='comment-" + response.data.id + "' class='container-in indent-0' ><article data-comment-id='" + response.data[i].id + "' data-thread-key='fastcoexist:3021967' data-depth='0' data-is-hidden='' class='comment clearfix'><header><span class='author name' data-author-provider='facebook' data-author-name='" + response.data[i].comment_author + "' data-author-screen-name='" + response.data[i].comment_author_screen_name + "'>" + response.data[i].comment_author + "</span><span class='parent-author'>" + response.data[i].comment_parent_author + "</span><time class='datess' data-created-at='" + response.data[i].created_at + "' datetime='" + response.data[i].created_at + "' title='" + response.data[i].created_at + "' ><a href='#comment-" + response.data[i].id + "'>2 days ago</a></time></header><span class='text node-article'><p>" + response.data[i].comment + "</p></span></article></div></li>";
+						}
+					}else {
+						html += "<div class='list-empty'><span>No comments yet. Be the first!</span></div>";
+					}
+				        html += "</ul></div></div>";
+					jQuery('#comments-content').html(html);
+				    }else{
+				        
+				    }
+				},
+				error: function(){
+				        
+				}
+			    });
+			//get Related Content
+			jQuery.ajax({
+				type:"GET",
+				dataType : 'json',
+				url: "http://" + window.location.host + "/blogs_news/getrelated/" + blogId,
+				success: function(response){
+				    if(response.success){
+					var html = '';
+					html += "<div class='line'></div><div class='related-wrap one-full portions'><div class='OUTBRAIN' data-widget-id='AR_1' data-ob-template='coexist' data-src='http://www.fastcoexist.com/3024333/this-artist-has-added-the-missing-truth-to-gorgeous-ads-for-luxury-products' data-ob-mark='true' data-dynload='' id='outbrain_widget_0'><div class='ob_strip_container AR_1'><span class='ob_org_header'><h5>YOU MIGHT ALSO LIKE</h5></span><div class='ob_container'><div class='ob_container_recs'>";
+					
+					if (response.data.count){
+						for(var i = 0; i < response.data.count; i++){
+							html += "<a class='item-link-container ob-odd' href='" + response.data[i].id + "' target='_self' rel=''><div class='item-container ob-recIdx-0   item-container-obpd'><div class='ob-rec-link-img ob-tcolor'><img class='strip-img' style='' width='138' height='138' src='" + response.data[i].img_src + "' ></div><div class='obpd ob-bgtcolor' onclick='outbrain.callWhatIs('NA','',-1,-1,true,null);return false'>FROM THE WEB</div><div class='ob-text-content'><div class='strip-rec-link-title ob-tcolor'>" + response.data[i].title + "</div><div class='strip-rec-link-source ob-lcolor'><span class='ob_source'>" + response.data[i].src + "</span></div></div></div></a>";
+						}
+					}else {
+						html += "<div class='list-empty'><span>No Related Stuff!</span></div>";
+					}
+				        html += "</div></div></div></div></div>";
+					jQuery('#related').html(html);
+				    }else{
+				        
+				    }
+				},
+				error: function(){
+				        
+				}
+			    });
+		});
+	</script>
 
         <div class="comment-list-footer"></div>
-        </div>
+        
 	</section>				
    </div>	
 	        

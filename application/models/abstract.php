@@ -5,7 +5,7 @@ abstract class AbstractModel extends CI_Model{
 
 	function __construct(){
 		parent::__construct();
-		$this->load->database('records');
+		
 	}
 
 	/*function __set(string $name , mixed $value){

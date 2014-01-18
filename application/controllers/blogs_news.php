@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-
-class Blogs_News extends CI_Controller {
+require_once(APPPATH . 'controllers/abstract.php');
+class Blogs_News extends AbstactController {
 
 	public function index(){
 		$this->page(1);
@@ -45,7 +45,7 @@ class Blogs_News extends CI_Controller {
 			$data['blog'] = $blog;
 			$this->load->model('chart');
 			$data['highlights'] = $this->chart->getChartHighlights();
-			$this->template->load('video', 'blogitem', $data, 'sidebar');
+			$this->template->load('video', 'blogs/view', $data, 'sidebar');
 		}else {
 			show_404();
 		}
@@ -103,30 +103,45 @@ class Blogs_News extends CI_Controller {
 		$blogId = $this->input->post('id');
 		$comment = $this->security->xss_clean($this->input->post('comment'));
 		$name = $this->security->xss_clean($this->input->post('name'));
-		$comment = $this->load->model('blog/comment');
-		$comment->setData('comment', $comment);
-		$comment->setData('name', $name);
-		$comment->setData('blog_id', $blogId);
-		$result = $comment->save();
+		$this->load->model('blog/comment', 'comment');
+		$this->comment->setData('comment', $comment);
+		$this->comment->setData('name', $name);
+		$this->comment->setData('blog_id', $blogId);
+		$result = $this->comment->save();
 		if (is_array($result)){
 			$reponse['status'] = 'error';
 			$response['error_data'] = $result;
 		}else {
 			$response['status'] = 'success';
-			$response['data'] = $comment->getData();
+			$response['data'] = $this->comment->getData();
 		}
 		header('content-type : application/json');
 		echo json_encode($response);
 	}
 
-	public function getComment($id){
-		$comment = $this->load->model('blog/comment');
-		$data = $comment->loadByBlogId($id);
+	public function getcomment($id){
+		$this->load->model('blog/comment', 'comment');
+		$data = $this->comment->loadByBlogId($id);
 		if ($data){
-			$response['status'] = 'success';
+			$response['success'] = 1;
 			$response['data'] = $data;
 		}else{
-			$response['status'] = 'error';
+			$response['success'] = '0';
+			$response['data']['count'] = 0;
+		}
+		header('content-type : application/json');
+		echo json_encode($response);
+	}
+
+	public function getRelated($id){
+		$this->load->model('blog/related', 'related');
+		$data = $this->related->loadByBlogId($id);
+		if ($data){
+			$response['success'] = 1;
+			$response['data'] = $data;
+		}else{
+			$response['success'] = '0';
+			$response['data']['count'] = 0;
 		}
 		header('content-type : application/json');
 		echo json_encode($response);

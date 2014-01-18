@@ -64,7 +64,7 @@ $db['default']['swap_pre'] = '';
 $db['default']['autoinit'] = TRUE;
 $db['default']['stricton'] = FALSE;
 
-$db['records']['hostname'] = 'localhost';
+$db['records']['hostname'] = '54.200.41.150';
 $db['records']['username'] = 'records';
 $db['records']['password'] = 'records@321';
 $db['records']['database'] = 'treedb';
