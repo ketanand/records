@@ -10,7 +10,7 @@
   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
     <head profile="http://www.w3.org/1999/xhtml/vocab">
-	<title><?php print $title; ?></title>
+	<title><?php print 'Records Tree'; ?></title>
 	<?php 
 	      echo $css;
 	      echo $scripts;
