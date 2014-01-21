@@ -42,7 +42,7 @@ class Blogs_News extends AbstactController {
 		$this->load->model('blog');
 		$blog = $this->blog->load($id);
 		if ($blog){
-			$data['blog'] = $blog;
+			$data['blog'] = $blog->getData();
 			$this->load->model('chart');
 			$data['highlights'] = $this->chart->getChartHighlights();
 			$this->template->load('video', 'blogs/view', $data, 'sidebar');
@@ -90,7 +90,7 @@ class Blogs_News extends AbstactController {
 		$this->load->model('news');
 		$news = $this->news->load($id);
 		if ($news){
-			$data['news'] = $news;
+			$data['news'] = $news->getData();
 			$this->load->model('chart');
 			$data['highlights'] = $this->chart->getChartHighlights();
 			$this->template->load('video', 'newsitem', $data, 'sidebar');
