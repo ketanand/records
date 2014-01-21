@@ -9,7 +9,7 @@ class Author extends AbstractModel{
 			$query = $this->db->get_where($this->_table, array('author_id' => $id));
 			$result = $query->result_array();
 			if ($count = count($result)){
-				return $result;
+				return $result[0];
 			}else{
 				return false;
 			}
