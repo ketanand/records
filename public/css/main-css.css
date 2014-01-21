@@ -101,7 +101,7 @@ h7 span { background: none repeat scroll 0 0 #FFFFFF; display: inline-block; mar
 /* ---------------------------------------------------------------------- */
 /* 03-   PRE HEADER CONTENT 
 /* ---------------------------------------------------------------------- */
-#pre-header { background: #9dcedf; float: left; width: 100%; padding: 0 40px 0 40px; margin: 0px 0 30px -40px; border-bottom: 1pt solid #d8d5cd; min-height: 50px; }
+#pre-header { background: #9dcedf; float: left; width: 100%; padding: 0 40px 0 40px; margin: 0px 0 30px -40px; border-bottom: 1pt solid #d8d5cd; min-height: 50px; position:fixed; top:0; left:0; z-index:999  }
 
 .pre-header { margin-bottom: 13px; }
 

@@ -166,7 +166,7 @@ class Records extends AbstactController {
 			echo "please enter a search term";
 			return;
 		}
-		$this->template->load('charts', 'search_results', $data, 'sidebar');
+		$this->template->load('charts', 'search_result', $data, 'sidebar');
 	}
 	
 }

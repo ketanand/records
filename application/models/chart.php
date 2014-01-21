@@ -4,7 +4,7 @@ class Chart extends AbstractModel{
 
 	private $_items = null;
 
-	private $_itemsPerPage = 4;
+	private $_itemsPerPage = 10;
 
 	private $_totalItems;
 
