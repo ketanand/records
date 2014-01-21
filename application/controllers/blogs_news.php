@@ -43,6 +43,9 @@ class Blogs_News extends AbstactController {
 		$blog = $this->blog->load($id);
 		if ($blog){
 			$data['blog'] = $blog->getData();
+			$this->load->model('author');
+			$authorData = $this->author->loadById($data['blog']['author_id']);
+			$data['author'] = $authorData;
 			$this->load->model('chart');
 			$data['highlights'] = $this->chart->getChartHighlights();
 			$this->template->load('video', 'blogs/view', $data, 'sidebar');
