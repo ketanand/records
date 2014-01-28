@@ -168,6 +168,42 @@ class Records extends AbstactController {
 		}
 		$this->template->load('charts', 'search_result', $data, 'sidebar');
 	}
+
+	/*
+	 * Function to create / login users
+	 */
+	public function login(){
+		$email = $this->input->post('email');
+		$this->load->model('user');
+		$response = array();
+		if ($user = $this->user->load($email)){
+			$newdata = array(
+					   'email'     => $email,
+					   'logged_in' => true
+				       );
+
+			$this->session->set_userdata($newdata);
+			$response['success'] = true;
+			$response['email'] = $email;
+		}else {
+			$this->user->setData('email', $email);
+			$this->user->setData('name', $this->input->post('name'));
+			$this->user->setData('firstname', $this->input->post('first_name'));
+			$this->user->setData('lastname', $this->input->post('last_name'));
+			$this->user->setData('gender', $this->input->post('gender'));
+			$this->user->setData('fb_link', $this->input->post('link'));
+			$this->user->setData('twitter_link', NULL);
+			$result = $this->user->save();
+			if (is_array($result)){
+				$response['success'] = false;
+			}else {
+				$response['success'] = true;
+				$response['email'] = $email;
+			}
+		}
+		header('content-type : application/json');
+		echo json_encode($response);
+	}
 	
 }
 

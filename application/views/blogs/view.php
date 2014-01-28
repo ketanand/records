@@ -172,7 +172,40 @@
 		    <div class="comment-form-header clearfix">
 		      	<h3>Add New Comment</h3>
 			<?php if(!$this->session->userdata('logged_in')): /**check if already logged in**/ ?>
-			<button class="account-login" name="login">Log In</button>
+			<button class="account-login" onClick="login()" name="login">Log In</button>
+			<script type="text/javascript" >
+				function login(){
+					FB.login(function(response){
+						if (response.authResponse) {
+							var accessToken = response.accessToken;
+							var userId = response.userID;
+							FB.api('/me', {fields: ['name', 'first_name', 'last_name', 'gender', 'email', 'link'],
+								      access_token :  accessToken  			
+							}, function(response) {
+								jQuery.ajax({
+									type:"POST",
+									data: response,
+									dataType : 'json',
+									url: "http://" + window.location.host + "/records/login",
+									success: function(response){
+									    if(response.success){
+
+									    }else{
+						
+									    }
+									},
+									error: function(){
+						
+									}
+								    });	
+							});
+
+					        } else {
+							// The person cancelled the login dialog
+						}
+					}, {scope: 'email'});
+				}
+			</script>
 			<?php else:?>
 				<ul class="account-dd">
 				  <li class="has-dropdown login">
@@ -186,12 +219,43 @@
 				</ul>				
 			<?php endif;?>
 		    </div>
-		    <form class="comment-reply-form clearfix">
-		    	    <textarea name="comment_reply_text" onClick="openSubmit()" maxlength="1000" rows="7" cols="80" placeholder="Type your comment here."></textarea>
-			    <button name="comment_reply_submit" type="submit" class="submit">Submit</button>
+		    <form id="comment-form" class="comment-reply-form clearfix">
+		    	    <textarea id="comment-text required-entry" name="comment" onClick="openSubmit()" maxlength="1000" rows="7" cols="80" placeholder="Type your comment here."></textarea>
+			    <button name="comment_reply_submit" onClick="submitComment()" class="submit">Submit</button>
 			    <script type="text/javascript">
 				function openSubmit(){
 					jQuery('#comment-reply').addClass('focused');
+				}
+				<?php if ( $this->session->userdata('logged_in')): ?>
+				var loggedIn = true;
+				<?php else: ?>
+				var loggedIn = false;
+				<?php endif; ?>
+				function submitComment(){
+					if (!loggedIn){
+						login();
+					}else {
+						var commentForm = new VarienForm('comment-form');
+						if (!commentForm.validator.validate()){
+							return;
+						}
+						var data = Form.serialize(commentForm)+'&id='+blogId;
+						jQuery.ajax({
+								type:"POST",
+								dataType : 'json',
+								url: "http://" + window.location.host + "/blogs/comment",
+								success: function(response){
+								    if(response.success){
+
+								    }else{
+						
+								    }
+								},
+								error: function(){
+						
+								}
+							    });						
+					}
 				}
 			    </script>
 		    </form>
@@ -218,7 +282,7 @@
 					html += "<div id='id-comments' class='comment-list'><div class='container-in'><ul class='comment-list' >";
 					if (response.data.count){
 						for(var i = 0; i < response.data.count; i++){
-							html += "<li class='comment-item'><div id='comment-" + response.data.id + "' class='container-in indent-0' ><article data-comment-id='" + response.data[i].id + "' data-thread-key='fastcoexist:3021967' data-depth='0' data-is-hidden='' class='comment clearfix'><header><span class='author name' data-author-provider='facebook' data-author-name='" + response.data[i].comment_author + "' data-author-screen-name='" + response.data[i].comment_author_screen_name + "'>" + response.data[i].comment_author + "</span><span class='parent-author'>" + response.data[i].comment_parent_author + "</span><time class='datess' data-created-at='" + response.data[i].created_at + "' datetime='" + response.data[i].created_at + "' title='" + response.data[i].created_at + "' ><a href='#comment-" + response.data[i].id + "'>2 days ago</a></time></header><span class='text node-article'><p>" + response.data[i].comment + "</p></span></article></div></li>";
+							html += "<li class='comment-item'><div id='comment-" + response.data[i].id + "' class='container-in indent-0' ><article data-comment-id='" + response.data[i].id + "' data-thread-key='fastcoexist:3021967' data-depth='0' data-is-hidden='' class='comment clearfix'><header><span class='author name' data-author-provider='facebook' data-author-name='" + response.data[i].comment_author + "' data-author-screen-name='" + response.data[i].comment_author_screen_name + "'>" + response.data[i].comment_author + "</span><span class='parent-author'>" + response.data[i].comment_parent_author + "</span><time class='datess' data-created-at='" + response.data[i].created_at + "' datetime='" + response.data[i].created_at + "' title='" + response.data[i].created_at + "' ><a href='#comment-" + response.data[i].id + "'>2 days ago</a></time></header><span class='text node-article'><p>" + response.data[i].comment + "</p></span></article></div></li>";
 						}
 					}else {
 						html += "<div class='list-empty'><span>No comments yet. Be the first!</span></div>";

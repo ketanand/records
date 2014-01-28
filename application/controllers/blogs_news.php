@@ -105,14 +105,15 @@ class Blogs_News extends AbstactController {
 	public function comment(){
 		$blogId = $this->input->post('id');
 		$comment = $this->security->xss_clean($this->input->post('comment'));
-		$name = $this->security->xss_clean($this->input->post('name'));
 		$this->load->model('blog/comment', 'comment');
 		$this->comment->setData('comment', $comment);
-		$this->comment->setData('name', $name);
+		$userId = $this->session->userdata('user_id');
+		$this->load->model('user')->load($userId);
+		$this->comment->setData('comment_author', $this->user->getData('name'));
 		$this->comment->setData('blog_id', $blogId);
 		$result = $this->comment->save();
 		if (is_array($result)){
-			$reponse['status'] = 'error';
+			$response['status'] = 'error';
 			$response['error_data'] = $result;
 		}else {
 			$response['status'] = 'success';
