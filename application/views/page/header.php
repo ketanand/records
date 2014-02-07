@@ -29,7 +29,7 @@
         <div id="header" class="clearfix">
         	<!-- #header-left -->
                 <div id="header-left" class="one-third"> 
-        	        <a href="/" title="Home" rel="home"> <img src="http://www.recordstree.com:9090/sites/all/themes/simplecorp/logo.png" alt="Home" /></a>
+        	        <a href="/" title="Home" rel="home"> <img src="/public/images/logo.png" alt="Home" /></a>
                 </div>
                 <!--EOF: #header-left -->     
                 <!-- #header-right -->
@@ -39,18 +39,18 @@
                         <!-- #main-navigation -->                        
                         <nav id="main-navigation" class="main-menu clearfix" role="navigation">
 	                        <ul class="menu">
-					<li class="first leaf"><a href="http://www.recordstree.com:8081/records/charts/top100" title="">Top 100</a></li>
-					<li class="leaf"><a href="http://recordstree.com/records50" title="">Records 50</a></li>
-					<li class="leaf"><a href="http://recordstree.com/artistoftheweek" title="">Artist of the week</a></li>
-					<li class="expanded"><a href="http://recordstree.com/genres" title="">Genres</a>
+					<li class="first leaf"><a href="/records/charts/top100" title="">Top 100</a></li>
+					<li class="leaf"><a href="/records50" title="">Records 50</a></li>
+					<li class="leaf"><a href="/artistoftheweek" title="">Artist of the week</a></li>
+					<li class="expanded"><a href="/genres" title="">Genres</a>
 						<ul class="menu">
-							<li class="first leaf"><a href="http://www.recordstree.com/bollywood" title="">Bollywood</a></li>
-							<li class="leaf"><a href="http://www.recordstree.com/indipop" title="">Indi Pop</a></li>
-							<li class="last leaf"><a href="http://www.recordstree.com/sufi" title="">Sufi</a></li>
+							<li class="first leaf"><a href="/bollywood" title="">Bollywood</a></li>
+							<li class="leaf"><a href="/indipop" title="">Indi Pop</a></li>
+							<li class="last leaf"><a href="/sufi" title="">Sufi</a></li>
 						</ul>
 					</li>
-					<li class="leaf"><a href="http://recordstree.com/firangi100" title="">Firangi 100</a></li>
-					<li class="last leaf"><a href="http://recordstree.com/video" title="">Records Video</a></li>
+					<li class="leaf"><a href="/firangi100" title="">Firangi 100</a></li>
+					<li class="last leaf"><a href="/video" title="">Records Video</a></li>
 				</ul>
 			</nav>
                         <!-- EOF: #main-navigation -->
