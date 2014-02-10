@@ -18,6 +18,16 @@
 */
 @import url(http://fonts.googleapis.com/css?family=Dosis:200,400,500,700);
 @import url(http://fonts.googleapis.com/css?family=Josefin+Sans:400,700|Unica+One|Allan);
+@font-face {
+	font-family: 'icomoon';
+	src:url('fonts/icomoon.eot');
+	src:url('fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('fonts/icomoon.woff') format('woff'),
+		url('fonts/icomoon.ttf') format('truetype'),
+		url('fonts/icomoon.svg#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
 
 /* ---------------------------------------------------------------------- */
 /* 01-   CLEARFIX 
@@ -1722,9 +1732,10 @@ font-style: italic;
 .OUTBRAIN .AR_1 .strip-rec-link-title:hover {text-decoration: underline;}
 .AR_1 .ob_what {font-size: 10px;}
 
+#related { height:100%; display:block;}
 #comments-publish { margin-top: 24px; position: relative; display: block;}
 #comments-form:before, #comments-form:after { content: " "; display: table;}
-#comments-form .comment-form-header { height: 27px; background: #000; border: 0;}
+#comments-form .comment-form-header { height: 27px; background: #000; border: 0; display:block;}
 #comments-form .comment-form-header h3 { float: left; font-size: 21px; padding: 2px 4px; color: #fff; margin: 0 0 24px; font-weight: 400;
 font-family: 'Unica One', cursive; text-transform: uppercase;}
 #comments-form .account-dd { float: right; }
@@ -1800,3 +1811,200 @@ padding:0px;
 .comment-item time a { margin-left: 11px; text-transform: uppercase; font-size: 13px; font-family: 'Allan', cursive; font-weight: 400; color: #ccc;}
 .comment-item .text { display: block; margin: 0 0 1em; padding: 0; word-break: break-word; font-family: 'Allan', cursive;}
 
+
+/*Login With social **/
+.reveal-modal { background: #fff;
+visibility: hidden;
+display: none;
+top: 100px;
+left: 50%;
+margin-left: -260px;
+width: 520px;
+position: absolute;
+z-index: 41;
+padding: 30px;
+-webkit-box-shadow: 0 0 10px rgba(0,0,0,0.4);
+-moz-box-shadow: 0 0 10px rgba(0,0,0,0.4);
+box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+#login-modal { z-index: 9999999 !important; padding: 0; top: 50% !important; margin-top: -117px; background: transparent; -moz-box-shadow: 0 0 0 transparent !important; -webkit-box-shadow: 0 0 0 transparent !important; box-shadow: 0 0 0 transparent !important;}
+.reveal-modal.large { width: 60%; margin-left: -30%; }
+#login-modal .open { position: fixed !important; }
+#login-modal>.center { max-width: 400px; margin: 0 auto; background: #000; padding: 24px;
+-webkit-box-shadow: 0px 0px 200px rgba(0,0,0,0.55);
+-moz-box-shadow: 0px 0px 200px rgba(0,0,0,0.55);
+box-shadow: 0px 0px 200px rgba(0,0,0,0.55);
+}
+.reveal-modal.large {
+width: 60%;
+margin-left: -30%;
+}
+#login-modal.open {
+position: fixed !important;
+}
+#login-modal .xout {
+float: right;
+color: #444;
+font-weight: bold;
+background-color: #111;
+cursor: pointer;
+}
+#login-modal header {
+margin: 0 0 12px;
+border-bottom: 1px solid #222;
+}
+#login-modal header:after {
+clear: both;
+}
+#login-modal header .title {
+color: #fff;
+text-transform: uppercase;
+margin: 0;
+}
+#login-modal header .description {
+color: #fff;
+padding-right: 20%;
+padding-bottom: 12px;
+}
+#login-modal header .error {
+display: none;
+color: #c60f13;
+}
+#login-modal header .description {
+color: #fff;
+padding-right: 20%;
+padding-bottom: 12px;
+}
+.block-grid.two-up {
+margin: 0 -15px;
+margin: 0 -8px;
+}
+.block-grid {
+display: block;
+overflow: hidden;
+padding: 0;
+}
+#login-modal ul li {
+margin-bottom: 0;
+padding-bottom: 0;
+}
+.block-grid.two-up>li:nth-child(2n+1) {
+clear: both;
+}
+.block-grid.two-up>li {
+width: 10%;
+padding: 0 15px 15px;
+padding: 0 80px 8px;
+}
+.block-grid>li {
+display: block;
+height: auto;
+float: left;
+}
+#login-modal ul li .button {
+width: 100%;
+text-align: center;
+font-weight: 200;
+text-shadow: none;
+border: 0 none;
+padding: 0;
+margin: 0;
+background-color: #000;
+border: 1px solid;
+line-height: 7.5;
+border-color: #000;
+-webkit-box-shadow: none;
+-moz-box-shadow: none;
+box-shadow: none;
+-webkit-transition-property: background-color,border-color;
+-moz-transition-property: background-color,border-color;
+-o-transition-property: background-color,border-color;
+transition-property: background-color,border-color;
+-webkit-transition-duration: 120ms;
+-moz-transition-duration: 120ms;
+-o-transition-duration: 120ms;
+transition-duration: 120ms;
+}
+#login-modal ul li .button .overlay i {
+display: block;
+position: absolute;
+top: 50%;
+left: 0;
+margin: 0;
+padding: 0;
+margin-top: -24px;
+width: 100%;
+text-align: center;
+font-size: 48px;
+-webkit-transition-property: font-size,margin;
+-moz-transition-property: font-size,margin;
+-o-transition-property: font-size,margin;
+transition-property: font-size,margin;
+-webkit-transition-duration: 600ms;
+-moz-transition-duration: 600ms;
+-o-transition-duration: 600ms;
+transition-duration: 600ms;
+}
+#login-modal ul li .button .overlay .label {
+display: block;
+position: absolute;
+bottom: 8px;
+left: 0;
+width: 100%;
+color: #fff;
+font-size: 14px;
+text-align: center;
+font-weight: 400;
+opacity: 0;
+background: transparent;
+-webkit-transition-property: opacity;
+-moz-transition-property: opacity;
+-o-transition-property: opacity;
+transition-property: opacity;
+-webkit-transition-duration: 120ms;
+-moz-transition-duration: 120ms;
+-o-transition-duration: 120ms;
+transition-duration: 120ms;
+}
+#login-modal ul li:hover .button .label, #login-modal ul li.active .button .label, #login-modal ul li.active:hover .button .label {
+opacity: 1;
+}
+.block-grid>li {
+display: block;
+height: auto;
+float: left;
+}
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-facebook:before {
+	content: "\e600";
+}
+.icon-twitter:before {
+	content: "\e601";
+}
+.reveal-modal-bg {
+z-index: 100;
+}
+.reveal-modal-bg {
+position: fixed;
+height: 100%;
+width: 100%;
+background: #000;
+background: rgba(0,0,0,0.45);
+z-index: 100;
+display: none;
+top: 0;
+left: 0;
+}

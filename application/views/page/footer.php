@@ -1,4 +1,54 @@
 <footer>
+<div class="reveal-modal-bg" style="opacity: 0.8; display: none; cursor: pointer;"></div>
+<div id="login-modal" class="reveal-modal large hide-on-print" style="z-index: 9999; top: 4131px; opacity: 1; visibility: hidden; display: none;"><div class="center">
+  <span class="xout" onclick="unreveal()">X</span>
+
+  <header>
+    <h2 class="title">Log In</h2>
+    <p class="description">Use your Twitter or Facebook account to comment.</p>
+    <p class="description error" style="display: none;">Something went wrong while trying to log you in; please try again.</p>
+  </header>
+
+
+  <ul class="block-grid two-up mobile-two-up">
+
+    
+
+    <li class="">
+
+      <a class="twitter button social-button" href="#" data-slug="twitter">
+
+        <span class="overlay">
+          <i class="icon-twitter"></i>
+          <span class="label hide-for-medium-down">Twitter</span>
+        </span>
+
+        
+        <img src="/images/spacer-1px.gif" width="1" height="1" class="spacer">
+      </a>
+    </li>
+
+    
+
+    <li class="">
+
+      <a class="facebook button social-button" href="#" data-slug="facebook" onclick="login()">
+
+        <span class="overlay">
+          <i class="icon-facebook"></i>
+          <span class="label hide-for-medium-down">Facebook</span>
+        </span>
+
+        
+        <img src="/images/spacer-1px.gif" width="1" height="1" class="spacer">
+      </a>
+    </li>
+
+    
+  </ul>
+
+</div>
+</div>
 <script type="text/javascript">
 <!--//--><![CDATA[//><!--
 

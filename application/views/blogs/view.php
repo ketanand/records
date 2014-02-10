@@ -143,8 +143,26 @@
 		    <div class="comment-form-header clearfix">
 		      	<h3>Add New Comment</h3>
 			<?php if(!$this->session->userdata('logged_in')): /**check if already logged in**/ ?>
-			<button class="account-login" onClick="login()" name="login">Log In</button>
+			<button class="account-login" onClick="reveal()" name="login">Log In</button>
 			<script type="text/javascript" >
+				function reveal()
+				{
+					jQuery('#login-modal').addClass('open');
+					jQuery('#login-modal').css('display','block');
+					jQuery('#login-modal').css('visibility','visible');
+					jQuery('#login-modal').css('top','8145px');
+					jQuery('.reveal-modal-bg').css('display','block');
+					
+				}
+				function unreveal()
+				{
+					jQuery('#login-modal').removeClass('open');
+					jQuery('#login-modal').css('display','none');
+					jQuery('#login-modal').css('visibility','hidden');
+					jQuery('#login-modal').css('top','4131px');
+					jQuery('.reveal-modal-bg').css('display','none');
+					
+				}
 				function login(){
 					FB.login(function(response){
 						if (response.authResponse) {
@@ -287,6 +305,7 @@
 					}
 				        html += "</div></div></div></div></div>";
 					jQuery('#related').html(html);
+					jQuery('#related').css('height', '380px');
 				    }else{
 				        
 				    }
@@ -298,7 +317,9 @@
 		});
 	</script>
 
-        <div class="comment-list-footer"></div>
+        <div class="comment-list-footer">
+	
+	</div>
         
 	</section>				
    </div>	
