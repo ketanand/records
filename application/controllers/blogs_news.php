@@ -107,16 +107,22 @@ class Blogs_News extends AbstactController {
 		$comment = $this->security->xss_clean($this->input->post('comment'));
 		$this->load->model('blog/comment', 'comment');
 		$this->comment->setData('comment', $comment);
-		$userId = $this->session->userdata('user_id');
-		$this->load->model('user')->load($userId);
+		$emailId = $this->session->userdata('email');
+		$this->load->model('user');
+		$this->user->load($emailId);
 		$this->comment->setData('comment_author', $this->user->getData('name'));
+		$this->comment->setData('comment_author_screen_name', $this->user->getData('name'));
 		$this->comment->setData('blog_id', $blogId);
+		$this->load->model('blog');
+		$blog = $this->blog->load($blogId);
+		$authorName = $blog->getAuthorName();
+		$this->comment->setData('comment_parent_author', $authorName);
 		$result = $this->comment->save();
 		if (is_array($result)){
-			$response['status'] = 'error';
+			$response['success'] = 'false';
 			$response['error_data'] = $result;
 		}else {
-			$response['status'] = 'success';
+			$response['success'] = 'true';
 			$response['data'] = $this->comment->getData();
 		}
 		header('content-type : application/json');

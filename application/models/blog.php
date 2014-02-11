@@ -23,6 +23,13 @@ class Blog extends AbstractModel{
 		return false;
 	}
 
+	function getAuthorName(){
+		$CI =& get_instance();
+		$CI->load->model('author');
+		$author = $CI->author->loadById($this->getData('author_id'));
+		return $author['author_name'];
+	}
+
 	function getComments(){
 		if ($this->_comments == null){
 			if ($id = $this->getData('id')){
