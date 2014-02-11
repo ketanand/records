@@ -8,7 +8,7 @@ class Comment extends AbstractModel{
 
 	public function save(){
 		$this->setData('id', NULL);
-		$this->setData('approved', $this->_moderated);
+		$this->setData('approved', !$this->_moderated);
 		$result = $this->db->insert($this->_table, $this->getData());
 		if (!$result){
 			$result['error_message'] = $this->db->_error_message();

@@ -199,6 +199,12 @@ class Records extends AbstactController {
 			}else {
 				$response['success'] = true;
 				$response['email'] = $email;
+				$newdata = array(
+					   'email'     => $email,
+					   'logged_in' => true
+				       );
+
+				$this->session->set_userdata($newdata);
 			}
 		}
 		header('content-type : application/json');
