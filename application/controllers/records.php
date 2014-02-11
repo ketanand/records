@@ -149,7 +149,47 @@ class Records extends AbstactController {
 			show_404();
 		}
 	}
-	
+		public function artistoftheweek(){
+		$data = array(
+   				'title' => 'RecordsTree.com',
+    			);
+		$data['highlights'] = array(
+					'0' => array(
+							'chart' => 'Bollywood',
+							'chart_link' => '/bollywood',
+							'chart_position' => '12',
+							'track_behaviour' => 'loss',
+							'track_title' => 'Tum Hi Ho',
+							'track_artist' => 'Arijit Singh'
+						    ),		
+					'1' => array(
+							'chart' => 'Fusion',
+							'chart_link' => '/fusion',
+							'chart_position' => '3',
+							'track_behaviour' => 'gain',
+							'track_title' => 'Jhankaar',
+							'track_artist' => 'Foonkh'
+						    ),	
+					'2' => array(
+							'chart' => 'Punjabi',
+							'chart_link' => '/punjabi',
+							'chart_position' => '1',
+							'track_behaviour' => 'same',
+							'track_title' => 'Blue Eyes',
+							'track_artist' => 'Honey Singh'
+						    ),	
+				);
+		//$this->load->model('chart');
+		//$chart = $this->chart->loadByName($name);
+		if (1){//$chart){
+			//$chartItems = $chart->getList();
+			//$data['title'] = $this->chart->getData('title');
+			//$data['items'] = $chartItems;
+			$this->template->load('video', 'aotw', $data, 'sidebar','aotw_banner');
+		}else {
+			show_404();
+		}
+	}
 	
 	
 

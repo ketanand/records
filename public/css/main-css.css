@@ -2008,3 +2008,33 @@ display: none;
 top: 0;
 left: 0;
 }
+
+/****Artist of the week ***/
+
+.large-6 { position: relative; width: 50%; font-family: "Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+font-weight: normal;
+font-style: normal;
+line-height: 1;
+cursor: default; }
+.rhs { background: #080808; }
+.splitpane { background-color: #EDF111; color: #000; height: 100%; overflow-x: hidden; overflow-y: auto; }
+.columns { padding-left: 0; padding-right: 0; float: left;}
+.thumb { position: relative; border: none; }
+.box-view .ligne { overflow: hidden; display: block; position: relative; bottom: 0; background-color: #121212;}
+.box-view .ligne .content-preview { position: relative; top: 0; bottom: 0; overflow: hidden; height: auto; margin: 0;}
+.box-view .ligne .content-preview a { color: #fff; text-decoration: none; }
+.box-view .ligne .content-preview img { position: relative; margin: 0; padding: 0; }
+.thumb img { width: 100%; border: none; display: inline-block;
+vertical-align: middle;}
+.box-view .ligne .content-preview a { color: #fff; }
+.box-view .ligne .content-preview .datas { background: url('../img/overimageshadow.png') bottom center; background-size: 100% 100%; position: absolute; bottom: 0; height: 70px; z-index: 20; padding: 0 21px 0 21px; overflow: visible; width: 100%; }
+.box-view .ligne .content-preview .datas h3 { margin: 14px 0 0 0; font-weight: normal; font-size: 1.228571428571429em; color: #fff; text-transform: uppercase; text-decoration: none; }
+.box-view .ligne .content-preview .datas p { font-family: 'FjallaOneRegular'; text-overflow: ellipsis; line-height: 100%; margin: 0; font-size: .8571428571428571em; color: #888; color: rgba(255,255,255,0.7); text-transform: uppercase; }
+.box-view .ligne .content-preview .sharing { position: absolute; bottom: -70px; height: 70px; background-color: #121212; width: 100%; z-index: 10; background-repeat: no-repeat; }
+.large-8 { position: relative; width: 90%; margin-left: 36px;
+margin-top: 18px;
+margin-bottom: 18px; }
+
+
+
+
