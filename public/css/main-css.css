@@ -417,9 +417,9 @@ ul#social-links > li.pinterest-link:hover {
 
 #pre-header ul.menu ul.menu, #pre-header ul.menu ul{ display:none; }
 
-#header { height: 35px; padding: 0px 0 17px 0; float: left; width: 100%; }
+#header { height: 35px; padding: 0px 0 62px 0; width: 100%; }
 
-.front #header {border-bottom: 1pt solid #D8D5CD;}
+.front #header {border-bottom: 9pt solid #D8D5CD;}
 
 #header-right {width : 100%; float:right;  padding-top: 30px; width: 100%;}
 
@@ -433,7 +433,7 @@ ul#social-links > li.pinterest-link:hover {
 
 .front #content{ margin-top: 0px; }
 
-#header-left { float: left;text-align:center; width: 100%; }
+#header-left { float: left;text-align:center; width: 100%; margin-top:40px}
 
 h1#site-name{ font-size: 18px; margin:0 0 12px 0; line-height: 27px;}
 
