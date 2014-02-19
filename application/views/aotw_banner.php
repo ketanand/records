@@ -53,11 +53,20 @@ $('.content-preview').mouseout(function() {
 </script>
 <div class="large-6 medium-6 small-12 columns splitpane boxscroll rhs responsePadding" style="overflow: hidden; outline: none;" tabindex="5001">
 <div class="small-12 medium-8 large-8 columns ">
-<div class="consumption-banner clearafter">
+<div class="consumption-banner clearafter live-tile" data-mode="flip" data-delay="4000">
 							<div class="small-12 large-12 columns">
-                                <img id="aotw-main-img" src="http://mtvstat.in.com/536bcc8e5693bb95675dd978c662a065_ls_xl.jpg">
+                                <img id="aotw-main-img" src="http://mtvstat.in.com/536bcc8e5693bb95675dd978c662a065_ls_xl.jpg" alt="1">
+
 							</div>
+	<div class="small-12 large-12 columns">
+                                <img id="aotw-main-img" src="http://mtvstat.in.com/f93393283728b05c8349e2ddb415e2d7.jpg" alt="2" >
+	</div>
 </div>
+<script type="text/javascript">
+    // apply regular slide universally unless .exclude class is applied 
+    // NOTE: The default options for each liveTile are being pulled from the 'data-' attributes
+    jQuery(".live-tile, .flip-list").not(".exclude").liveTile();
+</script>
 </div>
 
 </div>

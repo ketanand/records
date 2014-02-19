@@ -21,6 +21,7 @@
 @import url("/public/css/normalize.css");
 @import url("/public/css/plugins/flexslider.css");
 @import url("/public/css/local.css");
+@import url("/public/css/MetroJs.css");
 </style>
 <style type="text/css" media="all and (min-width: 768px) and (max-width: 959px)">
 @import url("/public/css/768.css");
