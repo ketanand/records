@@ -179,6 +179,40 @@ class Records extends AbstactController {
 							'track_artist' => 'Honey Singh'
 						    ),	
 				);
+		$data['page']['featured_videos'] = array(
+					'0' => array(
+							'id' => 'qSMdro7dFKM',
+							'link' => 'http://www.youtube.com/watch?v=qSMdro7dFKM'
+						    ),		
+					'1' => array(
+							'id' => 'qcguxHc4hiU',
+							'link' => 'http://www.youtube.com/watch?v=qcguxHc4hiU'
+						    ),	
+					'2' => array(
+							'id' => 'DXa48TgRYiE',
+							'link' => 'http://www.youtube.com/watch?v=DXa48TgRYiE'
+						    ),	
+					'3' => array(
+							'id' => 'e4Kk4XJ_dYY',
+							'link' => 'http://www.youtube.com/watch?v=e4Kk4XJ_dYY'
+						    ),	
+					'4' => array(
+							'id' => 'uwYbJCc_AC8',
+							'link' => 'http://www.youtube.com/watch?v=uwYbJCc_AC8'
+						    ),
+					'5' => array(
+							'id' => 'e4Kk4XJ_dYY',
+							'link' => 'http://www.youtube.com/watch?v=e4Kk4XJ_dYY'
+						    ),	
+					'6' => array(
+							'id' => 'uwYbJCc_AC8',
+							'link' => 'http://www.youtube.com/watch?v=uwYbJCc_AC8'
+						    ),
+					'7' => array(
+							'id' => 'uwYbJCc_AC8',
+							'link' => 'http://www.youtube.com/watch?v=uwYbJCc_AC8'
+						    )		
+				);
 		//$this->load->model('chart');
 		//$chart = $this->chart->loadByName($name);
 		if (1){//$chart){

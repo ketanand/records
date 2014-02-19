@@ -1,8 +1,8 @@
-<div style="overflow:auto">
+<div style="overflow:auto; margin-top:120px">
 <div class="large-6 medium-6 small-12 columns splitpane boxscroll rhs responsePadding" style="overflow: hidden; outline: none;" tabindex="5001">
 	<?php $i = 0; 
 	while($i<2){?>
-	<div class="rowdiv"><div class="large-6 medium-12 small-12 columns">
+	<div class="rowdiv"><div class="large-6 medium-12 small-12 columns" style="border-left:0px solid #333; border-bottom:0px solid #333;">
 				<div class="thumb">
 				<div class="box-view">
 				<div class="ligne">
@@ -19,7 +19,7 @@
 				</div>
 				</div>
 				</div>
-				</div><div class="large-6 medium-12 small-12 columns">
+				</div><div class="large-6 medium-12 small-12 columns" style="border-left:0px solid #333; border-bottom:0px solid #333;">
 				<div class="thumb">
 				<div class="box-view">
 				<div class="ligne">
@@ -38,11 +38,24 @@
 				</div>
 				</div></div><?php $i++; } ?>
 </div>
+<script>
+$('.content-preview').mouseover(function() {
+						$(this).find("img").animate({top:"-15px"},200);
+						$(this).find(".sharing").animate({bottom:"0px"},200);
+        					//alert($(this).attr("for"));
+ 						});
+$('.content-preview').mouseout(function() {
+						$(this).find("img").animate({top:"0px"},200);
+						$(this).find(".sharing").animate({bottom:"-70px"},200);
+        					//alert($(this).attr("for"));
+ 						});
+
+</script>
 <div class="large-6 medium-6 small-12 columns splitpane boxscroll rhs responsePadding" style="overflow: hidden; outline: none;" tabindex="5001">
 <div class="small-12 medium-8 large-8 columns ">
 <div class="consumption-banner clearafter">
 							<div class="small-12 large-12 columns">
-                                <img src="http://mtvstat.in.com/536bcc8e5693bb95675dd978c662a065_ls_xl.jpg">
+                                <img id="aotw-main-img" src="http://mtvstat.in.com/536bcc8e5693bb95675dd978c662a065_ls_xl.jpg">
 							</div>
 </div>
 </div>

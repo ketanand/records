@@ -52,7 +52,7 @@
          	<div id="page">
 	 		<?php echo $header; ?>
 			<?php if(isset($banner)) echo $banner; ?>
-			<div id="content" class="container clearfix">
+			<div id="content" class="container clearfix fullwidth">
 				
 			 	<?php echo $content; ?>
 				

@@ -111,7 +111,7 @@ h7 span { background: none repeat scroll 0 0 #FFFFFF; display: inline-block; mar
 /* ---------------------------------------------------------------------- */
 /* 03-   PRE HEADER CONTENT 
 /* ---------------------------------------------------------------------- */
-#pre-header { background: #9dcedf; float: left; width: 100%; padding: 0 40px 0 40px; margin: 0px 0 30px -40px; border-bottom: 1pt solid #d8d5cd; min-height: 50px; position:fixed; top:0; left:0; z-index:999  }
+#pre-header { background: #9dcedf; float: left; width: 100%; padding: 0 40px 0 40px; margin: 0px 0 30px -40px; border-bottom: 1pt solid #d8d5cd; min-height: 50px; position:fixed; top:0; left:0; z-index:9999  }
 
 .pre-header { margin-bottom: 13px; }
 
@@ -417,11 +417,14 @@ ul#social-links > li.pinterest-link:hover {
 
 #pre-header ul.menu ul.menu, #pre-header ul.menu ul{ display:none; }
 
-#header { height: 35px; padding: 0px 0 62px 0; width: 100%; }
+#header { height: 35px; padding: 0px 0 62px 0; width: 100%; position:fixed; z-index:10000;}
 
 .front #header {border-bottom: 9pt solid #D8D5CD;}
 
-#header-right {width : 100%; float:right;  padding-top: 30px; width: 100%;}
+#header-right {height: 100%;
+    margin-top: 22px;
+    width: 100%;
+    display:block;}
 
 #navigation-wrapper { /*float: right;*/ }
 
@@ -433,7 +436,7 @@ ul#social-links > li.pinterest-link:hover {
 
 .front #content{ margin-top: 0px; }
 
-#header-left { float: left;text-align:center; width: 100%; margin-top:40px}
+#header-left { text-align:center; width: 100%; margin-top:0px}
 
 h1#site-name{ font-size: 18px; margin:0 0 12px 0; line-height: 27px;}
 
@@ -471,6 +474,8 @@ h2#site-slogan{ color: #dbdbdb; margin:0 0 16px 0; font-size: 16px; line-height:
 .horizontal-line { width: 100%; margin: 30px 0; float: left; border-top: 1px solid #e1e1e1; }
 
 .one-fourth.widget-1, .one-fourth.widget-5 , .one-fourth.widget-9 { clear: both; }
+
+.fullwidth { width:100%}
 
 /* -------------------------------------------------- */
 /* MAVIGATION
@@ -1355,6 +1360,7 @@ ul.primary li a:hover { background-color: #eee; border-color: #ccc; border-botto
 /*charts*/
 
 #main-content { width:700px; float:left; margin-right:10px;}
+#main-content-aotw {width:75%; float:left; margin-right:10px;}
 #sidebar {float:left; }
 
 .charts-item-intro { width:180px; height:175px; padding-left: 10px; padding-right:10px; padding: 20px 10px 10px; float:left;}
@@ -1379,7 +1385,7 @@ li#charts-item { min-height: 175px; overflow: hidden; margin-left: 0; }
 
 .carousel { position:relative;  min-height: 30px; height:auto !important; height: 20px;  background:url(images/loader.gif) center center no-repeat; }
 			.carousel .next,
-			.carousel .prev { display:none; width:56px; height:56px; position:absolute; bottom:20px; left:50%; margin-top:-28px; z-index:9999; cursor:pointer; }
+			.carousel .prev { display:none; width:56px; height:56px; position:absolute; bottom:20px; left:50%; margin-top:-28px; z-index:900; cursor:pointer; }
 			.carousel .prev { margin-left:-60px; background:url(images/prev.png) 0 0 no-repeat;  }
 			.carousel .next { margin-right:-60px;  background:url(images/next.png) 0 0 no-repeat; }
 			.carousel li img { width:94%; height:auto; border: medium none; max-width:136%}
@@ -1387,7 +1393,7 @@ li#charts-item { min-height: 175px; overflow: hidden; margin-left: 0; }
 			.paging > a { display:block; cursor:pointer; width:40px; height:40px; float:left; background:url(images/dots.png) 0px -40px no-repeat; }
 			.paging > a:hover,
 			.paging > a.current { background:url(images/dots.png) 0px 0px no-repeat;  }
-			.badge { display:block; width:104px; height:104px; background:url(images/badge.png) 0 0 no-repeat; z-index:9000; position:absolute; top:-3px; left:-3px; }
+			.badge { display:block; width:104px; height:104px; background:url(images/badge.png) 0 0 no-repeat; z-index:900; position:absolute; top:-3px; left:-3px; }
 ol, ul, li { list-style:none; }	
 
 .wrap { padding:0px; }		
@@ -2017,7 +2023,7 @@ font-style: normal;
 line-height: 1;
 cursor: default; }
 .rhs { background: #080808; }
-.splitpane { background-color: #EDF111; color: #000; height: 100%; overflow-x: hidden; overflow-y: auto; }
+.splitpane { background-color: black; color: #000; height: 100%; overflow-x: hidden; overflow-y: auto; }
 .columns { padding-left: 0; padding-right: 0; float: left;}
 .thumb { position: relative; border: none; }
 .box-view .ligne { overflow: hidden; display: block; position: relative; bottom: 0; background-color: #121212;}
@@ -2028,12 +2034,13 @@ cursor: default; }
 vertical-align: middle;}
 .box-view .ligne .content-preview a { color: #fff; }
 .box-view .ligne .content-preview .datas { background: url('../img/overimageshadow.png') bottom center; background-size: 100% 100%; position: absolute; bottom: 0; height: 70px; z-index: 20; padding: 0 21px 0 21px; overflow: visible; width: 100%; }
-.box-view .ligne .content-preview .datas h3 { margin: 14px 0 0 0; font-weight: normal; font-size: 1.228571428571429em; color: #fff; text-transform: uppercase; text-decoration: none; }
-.box-view .ligne .content-preview .datas p { font-family: 'FjallaOneRegular'; text-overflow: ellipsis; line-height: 100%; margin: 0; font-size: .8571428571428571em; color: #888; color: rgba(255,255,255,0.7); text-transform: uppercase; }
+.box-view .ligne .content-preview .datas h3 { margin: 14px 0 0 0; font-weight: bold; font-size: 1.228571428571429em; color: #fff; text-transform: uppercase; text-decoration: none; font-family:"Impact", Charcoal, sans-serif; line-height: 1.2em;}
+.box-view .ligne .content-preview .datas p { font-family:"Impact", Charcoal, sans-serif; text-overflow: ellipsis; line-height: 1.2em; margin: 0; font-size: .8571428571428571em; color: #888; color: rgba(255,255,255,0.7); text-transform: uppercase; font-weight: bold; }
 .box-view .ligne .content-preview .sharing { position: absolute; bottom: -70px; height: 70px; background-color: #121212; width: 100%; z-index: 10; background-repeat: no-repeat; }
 .large-8 { position: relative; width: 90%; margin-left: 36px;
 margin-top: 18px;
 margin-bottom: 18px; }
+#aotw-main-img { width : 100%;}
 
 
 
