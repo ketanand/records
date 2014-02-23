@@ -4,6 +4,10 @@ class User extends AbstractModel{
 
 	private $_table = 'user';
 
+	function __construct(){
+		parent::__construct();
+	}
+
 	public function load($email){
 		if ($email){
 			$query = $this->db->get_where($this->_table, array('email' => $email));

@@ -175,6 +175,13 @@
     
                     </div>
 	</div><!-- EOF #featured -->
+<div id="cp_widget_2b80ffad-caa4-44d8-beac-eef3e6a488b3">...</div><script type="text/javascript">
+var cpo = []; cpo["_object"] ="cp_widget_2b80ffad-caa4-44d8-beac-eef3e6a488b3"; cpo["_fid"] = "AwBAvebW4uUL";
+var _cpmp = _cpmp || []; _cpmp.push(cpo);
+(function() { var cp = document.createElement("script"); cp.type = "text/javascript";
+cp.async = true; cp.src = "//www.cincopa.com/media-platform/runtime/libasync.js";
+var c = document.getElementsByTagName("script")[0];
+c.parentNode.insertBefore(cp, c); })(); </script><noscript>Powered by Cincopa <a href='http://www.cincopa.com/video-hosting'>Video Hosting</a> solution.</noscript>
          <!-- #charts -->
             <div id="bottom-content">
 	<h3>Featured Videos</h3>
