@@ -6,6 +6,16 @@ class Artist extends AbstractModel{
 
 	private $_albums = null;
 
+	const TYPE_SOLO	= 1;
+    	const TYPE_BAND	= 2;
+
+	    static public function getTypeArray(){
+		return array(
+		    self::TYPE_SOLO	=> 'Solo',
+		    self::TYPE_BAND	=> 'Band'
+		);
+	    }
+
 	function __construct(){
 		parent::__construct();
 	}
