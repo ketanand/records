@@ -197,9 +197,11 @@ class Records extends AbstactController {
 		if ($artist){
 			$data['artist'] = $artist->getData();
 			$data['albums'] = $artist->getAlbums();
+			$albums = $artist->getAlbums();
+			$data['tracks'] = $albums[0]->getSongs();
 			$this->load->model('chart');
 			$data['highlights'] = $this->_getChartHighlights();
-			$this->template->load('video', 'aotw', $data, 'sidebar','aotw_banner');
+			$this->template->load('video', 'aotw', $data, 'sidebar','aotw_banner');		
 		}else {
 			show_404();
 		}
@@ -207,7 +209,7 @@ class Records extends AbstactController {
 
 	protected function _getChartHighlights(){
 		$this->load->model('chart');
-		return $chart->getChartHighlights();
+		return $this->chart->getChartHighlights();
 	}
 	
 	
