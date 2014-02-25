@@ -10,10 +10,14 @@
 <script type="text/javascript" src="/public/js/plugins/fancybox.js"></script>
 <script type="text/javascript" src="/public/js/jquery.validate.min.js"></script>
 <script type="text/javascript" src="/public/js/MetroJs.min.js"></script>
+<script type="text/javascript" src="/public/js/jquery.feedBackBox.js"></script>
 <script type="text/javascript" >
 <?php if ( $this->session->userdata('logged_in')): ?>
 	var loggedIn = true;
 <?php else: ?>
 	var loggedIn = false;
 <?php endif; ?>
+jQuery(document).ready(function () {
+            $('#contact-us').feedBackBox();
+        });
 </script>

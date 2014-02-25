@@ -37,6 +37,7 @@
 	 	<?php echo $footer; ?>
 		</div>
 	 </div>
+	 <div id="contact-us"></div>
    </body>
     
 </html>
