@@ -26,7 +26,7 @@
 @import url("/public/css/plugins/flexslider.css");
 @import url("/public/css/MetroJs.css");
 </style>
-<style type="text/css" media="all and (min-width: 768px) and (max-width: 959px)">
+<!--style type="text/css" media="all and (min-width: 768px) and (max-width: 959px)">
 @import url("/public/css/768.css");
 </style>
 <style type="text/css" media="all and (min-width: 480px) and (max-width: 767px)">
@@ -34,5 +34,5 @@
 </style>
 <style type="text/css" media="all and (max-width: 479px)">
 @import url("/public/css/320.css");
-</style>
+</style-->
 <link href="/public/css/jquery.feedBackBox.css" rel="stylesheet" type="text/css">

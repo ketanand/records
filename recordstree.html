@@ -2,40 +2,58 @@
 <head>
 <link href='http://fonts.googleapis.com/css?family=Audiowide|Bangers|Oxygen:700' rel='stylesheet' type='text/css'>
 <style>
+html {
+overflow: auto
+}
 body {
 background-image:url("/public/images/rt-background.jpg");
-background-size: 100% auto;
+background-size: 100%;
+}
+.wrapper {
+position: relative;
+height:100%;
+width:100%;
+}
+.tag-line-wrapper {
+margin-top: 60px;
+text-align: center;
 }
 .tag-line {
 text-align:center;
 font-size:70px;
 font-family: 'Bangers', cursive;
 font-style:italic;
- position: absolute;
-    top: 59%;
-    left: 12%;
+}
+.rt-wrapper {
+text-align: center;
+    margin-left: -40px;
 }
 .rt {
 text-align:center;
 font-size:35px;
 font-family: 'Audiowide', cursive;
- position: absolute;
-    top: 43%;
-    left: 42%;
+}
+.logo-wrapper{
+margin-top: 100px;
+text-align: center;
 }
 img {
-    position: absolute;
-    top: 25%;
-    left: 45%;
     width: 150px;
     height: 150px;
 }
 </style>
 </head>
 <body>
-
-	<img class="logo" src="/public/images/logo_rt.png" />
-	<span class="rt" >recordstree</span>	
-	<span class="tag-line" >Stay put while we soundscape your world.</span>	
+	<div class="wrapper" >
+		<div class="logo-wrapper">
+			<img class="logo" src="/public/images/logo_rt.png">
+		</div>
+		<div class="rt-wrapper">
+			<span class="rt" >recordstree</span>
+		</div>
+		<div class="tag-line-wrapper" >	
+			<span class="tag-line" >Stay put while we soundscape your world.</span>	
+		</div>
+	</div>
 </body>
 </html>
