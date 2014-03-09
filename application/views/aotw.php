@@ -83,6 +83,9 @@
 	<div class="info-head clearafter">
 		<div class="small-6 medium-4 large-4 ">Latest Tracks</div>
 	</div>
+	<script>
+		var songs = new Array();
+	</script>
 	<?php foreach($tracks as $t): ?>	
 	<div class="info-row clearafter">
 		<div class="tracks-row-number columns">
@@ -103,14 +106,21 @@
 		</div>
 		<div class="tracks-row-play columns">
 		<div class="tracks-row-play-text aotw-row-text">
-		<a href="">Play</a>
+		<a href="#" onClick="playSong(<?php echo $t['id']; ?>); return false;" >Play</a>
 		</div>
 		</div>
 		<div class="tracks-row-add columns">
 		<div class="tracks-row-add-text aotw-row-text">
-		<a href="">+</a>
+		<a href="#" onClick="addToPlaylist(<?php echo $t['id']; ?>); return false;" >+</a>
 		</div>
 		</div>
+		<script>
+			var song = new Object();
+			song.title = '<?php echo $t["title"]; ?>';
+			song.artist = '<?php echo $t["artist_title"]; ?>';
+			song.mp3 = '<?php echo $t["mp3"]; ?>';
+			songs[<?php echo $t['id']; ?>] = song;
+		</script>
 	</div>
 	<?php endforeach; ?>	
 	</div>

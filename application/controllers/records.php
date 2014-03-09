@@ -201,7 +201,7 @@ class Records extends AbstactController {
 			$data['tracks'] = $albums[0]->getSongs();
 			$this->load->model('chart');
 			$data['highlights'] = $this->_getChartHighlights();
-			$this->template->load('video', 'aotw', $data, 'sidebar','aotw_banner');		
+			$this->template->load('aotw', 'aotw', $data, 'sidebar','aotw_banner');		
 		}else {
 			show_404();
 		}
