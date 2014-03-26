@@ -1,0 +1,75 @@
+.rt-theme {
+   padding-top: 110px;
+}
+.nopadding {
+   padding: 0 !important;
+   margin: 0 !important;
+}
+
+.vertical-margin {
+   margin-top:15px;
+   margin-bottom:15px;	
+}
+
+.home-news-image {
+   height: auto;
+   width: 280px;
+}
+
+.footer {
+   background-color:#2F2F2F;
+}
+
+.footer ul{
+   list-style-type:none;
+}
+
+.footer li{
+   padding:10px;
+}
+
+.nav-social {
+   width:40px;
+   padding-top:5px;
+}
+
+.nav-logo {
+   width:100px;
+   background-color:#000000;
+}
+
+.nav-logo-wrapper {
+   background-color:#000000;
+   float: left;
+    font-size: 18px;
+    height: 50px;
+    line-height: 20px;
+   padding-bottom:51px;
+}
+
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  height: 400px;
+  margin-bottom: 60px;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 400px;
+  background-color: #777;
+}
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 400px;
+}

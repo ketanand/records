@@ -41,7 +41,7 @@ class Records extends AbstactController {
 							'link' => 'http://www.youtube.com/watch?v=uwYbJCc_AC8'
 						    )		
 				);
-		$this->template->load('default', 'homepage', $data);
+		$this->template->load('homepage', 'homepage', $data);
 	}
 
 	
