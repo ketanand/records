@@ -29,8 +29,22 @@
 }
 
 .nav-social {
-   width:40px;
-   padding-top:5px;
+   width:35px;
+   margin-top:5px;
+   margin-right:2px;
+   background-color:transparent;
+}
+
+.fb:hover {
+  background-color:#3b5999;
+}
+
+.twitter:hover {
+  background-color:#4099FF;
+}
+
+.google:hover{
+  background-color:#d34836;
 }
 
 .nav-logo {

@@ -51,9 +51,9 @@
             </li>
           </ul>
 	  <ul class="nav navbar-nav navbar-right">
-            <li><a href="https://www.facebook.com/recordstree" class="nopadding" ><img src="/public/images/fb.PNG" class="nav-social" alt="Facebook" ></a></li>
-            <li><a href="https://www.twitter.com/recordstree" class="nopadding" ><img src="/public/images/twitter.PNG" class="nav-social" alt="Twitter" ></a></li>
-            <li><a href="#" class="nopadding"><img src="/public/images/google.PNG" class="nav-social" alt="Goolge"></a></li>
+            <li><a href="https://www.facebook.com/recordstree" class="nopadding" ><img src="/public/images/fb.png" class="img-circle nav-social fb" alt="Facebook" ></a></li>
+            <li><a href="https://www.twitter.com/recordstree" class="nopadding" ><img src="/public/images/twit.png" class="img-circle nav-social twitter" alt="Twitter" ></a></li>
+            <li><a href="#" class="nopadding"><img src="/public/images/g+.png" class="img-circle nav-social google" alt="Goolge"></a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
