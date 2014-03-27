@@ -2081,6 +2081,8 @@ width: 33.33333%;
 .info-row {
 border-bottom: 1px solid #fff;
 background: #ECF0F1;
+display:block;
+overflow:auto;
 }
 .info-row .columns {
 height: 100%;
