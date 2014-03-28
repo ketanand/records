@@ -5,7 +5,7 @@ class Records extends AbstactController {
 	public function index()
 	{
 		$data = array(
-   				'title' => 'RecordsTree.com'
+   				'title' => 'RecordsTree: Soundscaping your world.'
     			);
 		$data['page']['featured_videos'] = array(
 					'0' => array(

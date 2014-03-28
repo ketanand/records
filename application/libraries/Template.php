@@ -5,7 +5,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
    {
       var $ci;
       const HEAD_PATH = 'page/head'; 
-      const HEADER_PATH = 'page/header'; 
+      const HEADER_PATH = 'page/top_menu'; 
       const FOOTER_PATH = 'page/footer';
       const CSS_PATH = 'page/head/css';
       const JS_PATH = 'page/head/scripts'; 

@@ -11,6 +11,9 @@
   xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
     <head profile="http://www.w3.org/1999/xhtml/vocab">
 	<title><?php print 'Records Tree'; ?></title>
+	<!-- Bootstrap -->
+	<link href="/public/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/public/css/main.css" rel="stylesheet">
 	<?php 
 	      echo $css;
 	      echo $scripts;
@@ -22,6 +25,7 @@
     </head>
 
     <body class="front">
+	<?php echo $header; ?>
 	 <!-- fb sdk -->
 	<div id="fb-root"></div>
 	<script>/* (function(d, s, id) {
@@ -53,7 +57,6 @@
          <div id="page-wrapper">
          	<!-- #page -->
          	<div id="page">
-	 		<?php echo $header; ?>
 			<?php if(isset($banner)) echo $banner; ?>
 			<div id="content" class="container clearfix fullwidth">
 				
@@ -156,6 +159,7 @@
 	 		<?php echo $footer; ?>
 		</div>
 	 </div>
+	 <script src="/public/js/bootstrap.min.js"></script>
    </body>
     
 </html>
