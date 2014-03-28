@@ -62,6 +62,47 @@
 }
 
 
+.multi-carousel {
+    background: url("/public/images/slider/loader.gif") no-repeat scroll center center transparent;
+    height: auto !important;
+    min-height: 20px;
+    position: relative;
+}
+
+
+.multi-carousel .prev {
+    background: url("/public/images/slider/prev.png") no-repeat scroll 0 0 transparent;
+    margin-left: -60px;
+}
+
+.multi-carousel .next {
+    background: url("/public/images/slider/next.png") no-repeat scroll 0 0 transparent;
+    margin-right: -60px;
+}
+
+.multi-carousel .next, .multi-carousel .prev {
+    bottom: 20px;
+    cursor: pointer;
+    display: none;
+    height: 56px;
+    left: 50%;
+    margin-top: -28px;
+    position: absolute;
+    width: 56px;
+    z-index: 9999;
+}
+
+.multi-carousel li { 
+    display:none; 
+}
+
+.multi-carousel li img { 
+   width:100%; height:auto; 
+   margin-left:5px;
+   margin-right:5px;
+}
+
+
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 
