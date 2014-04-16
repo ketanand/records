@@ -33,6 +33,24 @@
     </div>
     <div class="container" >
 	<div class="row">
+		<h1><span><?echo strtoupper("ARTIST OF THE WEEK");?></span></h1>
+		<span class="sub-heading"><?php echo strtoupper("Upcoming talent from the underground music base");?></span>
+		<div class="social-icons">
+			<a href="#" class="social24 facebook"></a>
+			<a href="#" class="social24 twitter"></a>
+			<!--a href="#" class="social24 pinterest">Pinterest</a>
+			<a href="#" class="social24 linkedin">LinkedIn</a>
+			<a href="#" class="social24 stumble">Stumble</a>
+			<a href="#" class="social24 dribbble">Dribbble</a>
+			<a href="#" class="social24 digg">Digg</a-->
+			<a href="#" class="social24 google"></a>
+			<!--a href="#" class="social24 delicious">Delicious</a>
+			<a href="#" class="social24 youtube">Youtube</a>
+			<a href="#" class="social24 instagram">Instagram</a>
+			<a href="#" class="social24 vimeo">Vimeo</a-->
+		</div>
+	</div>
+	<div class="row">
 		<div class="col-md-9" >
     			<?php echo $content; ?> 
 		</div>

@@ -21,60 +21,60 @@
 <div id="main-content-aotw">
 <div class="consumption-view  clearafter">
 	<div class="artist-info">
-	<div class="info-head clearafter">
-		<div class="small-6 medium-4 large-4 ">Artist Info</div>
-	</div>
-	<div class="info-row clearafter">
-		<div class="info-row-head columns">
-		<div class="info-row-head-text">
-		<b>
-		Name</b>
+		<div class="info-head clearafter">
+			<div class="small-6 medium-4 large-4 ">Artist Info</div>
 		</div>
+		<div class="info-row clearafter">
+			<div class="info-row-head columns">
+			<div class="info-row-head-text">
+			<b>
+			Name</b>
+			</div>
+			</div>
+			<div class="info-row-content columns">
+			<div class="info-row-content-text">
+			<?php echo $artist['name']; ?>
+			</div>
+			</div>
 		</div>
-		<div class="info-row-content columns">
-		<div class="info-row-content-text">
-		<?php echo $artist['name']; ?>
+		<div class="info-row clearafter">
+			<div class="info-row-head columns">
+			<div class="info-row-head-text">
+			<b>
+			Date Of Inception </b>
+			</div>		
+			</div>
+			<div class="info-row-content columns">
+			<div class="info-row-content-text">
+			<?php echo date("d M, Y", strtotime($artist['dob'])); ?>
+			</div>
+			</div>
+		</div>	
+		<div class="info-row clearafter">
+			<div class="info-row-head columns">
+			<div class="info-row-head-text">
+			<b>
+			Genre</b>
+			</div>
+			</div>
+			<div class="info-row-content columns">
+			<div class="info-row-content-text">
+			<?php echo $artist['genre']; ?>
+			</div>
+			</div>
 		</div>
+		<div class="info-row clearafter">	
+			<div class="info-row-head columns">
+			<div class="info-row-head-text"><b>
+			Biography</b>
+			</div>
+			</div>
+			<div class="info-row-content columns">
+			<div class="info-row-content-text">	
+			<?php echo $artist['long_desc']; ?>
+			</div>
+			</div>					
 		</div>
-	</div>
-	<div class="info-row clearafter">
-		<div class="info-row-head columns">
-		<div class="info-row-head-text">
-		<b>
-		Date Of Inception </b>
-		</div>		
-		</div>
-		<div class="info-row-content columns">
-		<div class="info-row-content-text">
-		<?php echo date("d M, Y", strtotime($artist['dob'])); ?>
-		</div>
-		</div>
-	</div>	
-	<div class="info-row clearafter">
-		<div class="info-row-head columns">
-		<div class="info-row-head-text">
-		<b>
-		Genre</b>
-		</div>
-		</div>
-		<div class="info-row-content columns">
-		<div class="info-row-content-text">
-		<?php echo $artist['genre']; ?>
-		</div>
-		</div>
-	</div>
-	<div class="info-row clearafter">	
-		<div class="info-row-head columns">
-		<div class="info-row-head-text"><b>
-		Biography</b>
-		</div>
-		</div>
-		<div class="info-row-content columns">
-		<div class="info-row-content-text">	
-		<?php echo $artist['long_desc']; ?>
-		</div>
-		</div>					
-	</div>
 	
 	</div>
 </div>
