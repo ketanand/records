@@ -49,7 +49,7 @@ $route['news/view/(:num)'] = "blogs_news/newsitem/$1";
 $route['blogs/comment'] = "blogs_news/comment";
 $route['blogs/getcomment/(:num)'] = "blogs_news/getcomment/$1";
 $route['blogs/getrelated/(:num)'] = "blogs_news/getrelated/$1";
-$route['artistoftheweek'] = "records/artist";
+$route['artistoftheweek'] = "artistcontroller/artistoftheweek";
 $route['video'] = "records/video";
 
 

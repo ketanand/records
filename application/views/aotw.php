@@ -261,28 +261,29 @@
 
                     <a href="#" class="colored" title="portofolio">View full portofolio</a> 
 <script type="text/javascript">
-			$('.carousel[data-mixed] ul').anoSlide(
-			{
-				items: 5,
-				speed: 500,
-				prev: 'a.prev[data-prev]',
-				next: 'a.next[data-next]',
-				lazy: true,
-				delay: 100
-			});
-			$('.featured-video-ul').css("height","207px");
+			
 			$(document).ready(function() {
-			$(".various").fancybox({
-				maxWidth	: 800,
-				maxHeight	: 600,
-				fitToView	: false,
-				width		: '100%',
-				height		: '100%',
-				autoSize	: false,
-				closeClick	: false,
-				openEffect	: 'none',
-				closeEffect	: 'none'
-			});
+				$('.carousel[data-mixed] ul').anoSlide(
+				{
+					items: 5,
+					speed: 500,
+					prev: 'a.prev[data-prev]',
+					next: 'a.next[data-next]',
+					lazy: true,
+					delay: 100
+				});
+				$('.featured-video-ul').css("height","207px");
+				$(".various").fancybox({
+					maxWidth	: 800,
+					maxHeight	: 600,
+					fitToView	: false,
+					width		: '100%',
+					height		: '100%',
+					autoSize	: false,
+					closeClick	: false,
+					openEffect	: 'none',
+					closeEffect	: 'none'
+				});
 			});
 		</script>
             </div>	
@@ -365,28 +366,29 @@
 
                     <a href="#" class="colored" title="portofolio">View full portofolio</a> 
 <script type="text/javascript">
-			$('.carousel[data-mixed] ul').anoSlide(
-			{
-				items: 5,
-				speed: 500,
-				prev: 'a.prev[data-prev]',
-				next: 'a.next[data-next]',
-				lazy: true,
-				delay: 100
-			});
-			$('.featured-video-ul').css("height","207px");
+			
 			$(document).ready(function() {
-			$(".various").fancybox({
-				maxWidth	: 800,
-				maxHeight	: 600,
-				fitToView	: false,
-				width		: '100%',
-				height		: '100%',
-				autoSize	: false,
-				closeClick	: false,
-				openEffect	: 'none',
-				closeEffect	: 'none'
-			});
+				$('.carousel[data-mixed] ul').anoSlide(
+				{
+					items: 5,
+					speed: 500,
+					prev: 'a.prev[data-prev]',
+					next: 'a.next[data-next]',
+					lazy: true,
+					delay: 100
+				});
+				$('.featured-video-ul').css("height","207px");
+				$(".various").fancybox({
+					maxWidth	: 800,
+					maxHeight	: 600,
+					fitToView	: false,
+					width		: '100%',
+					height		: '100%',
+					autoSize	: false,
+					closeClick	: false,
+					openEffect	: 'none',
+					closeEffect	: 'none'
+				});
 			});
 		</script>
             </div>

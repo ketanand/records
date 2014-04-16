@@ -2,7 +2,8 @@
 <div class="large-6 medium-6 small-12 columns splitpane boxscroll rhs responsePadding" style="overflow: hidden; outline: none;" tabindex="5001">
 	<?php $i = 0; 
 	while($i<2){?>
-	<div class="rowdiv"><div class="large-6 medium-12 small-12 columns" style="border-left:0px solid #333; border-bottom:0px solid #333;">
+	<div class="rowdiv">
+		<div class="large-6 medium-12 small-12 columns" style="border-left:0px solid #333; border-bottom:0px solid #333;">
 				<div class="thumb">
 				<div class="box-view">
 				<div class="ligne">
@@ -19,7 +20,8 @@
 				</div>
 				</div>
 				</div>
-				</div><div class="large-6 medium-12 small-12 columns" style="border-left:0px solid #333; border-bottom:0px solid #333;">
+		</div>
+		<div class="large-6 medium-12 small-12 columns" style="border-left:0px solid #333; border-bottom:0px solid #333;">
 				<div class="thumb">
 				<div class="box-view">
 				<div class="ligne">
@@ -36,7 +38,8 @@
 				</div>
 				</div>
 				</div>
-				</div></div><?php $i++; } ?>
+		</div>
+      </div><?php $i++; } ?>
 </div>
 <script>
 $('.content-preview').mouseover(function() {
@@ -54,12 +57,11 @@ $('.content-preview').mouseout(function() {
 <div class="large-6 medium-6 small-12 columns splitpane boxscroll rhs responsePadding" style="overflow: hidden; outline: none;" tabindex="5001">
 <div class="small-12 medium-8 large-8 columns ">
 <div class="consumption-banner clearafter live-tile" data-mode="flip" data-delay="4000">
-							<div class="small-12 large-12 columns">
-                                <img id="aotw-main-img" src="http://mtvstat.in.com/536bcc8e5693bb95675dd978c662a065_ls_xl.jpg" alt="1">
-
-							</div>
 	<div class="small-12 large-12 columns">
-                                <img id="aotw-main-img" src="http://mtvstat.in.com/f93393283728b05c8349e2ddb415e2d7.jpg" alt="2" >
+        	<img id="aotw-main-img" src="http://mtvstat.in.com/536bcc8e5693bb95675dd978c662a065_ls_xl.jpg" alt="1">
+	</div>
+	<div class="small-12 large-12 columns">
+	        <img id="aotw-main-img" src="http://mtvstat.in.com/f93393283728b05c8349e2ddb415e2d7.jpg" alt="2" >
 	</div>
 </div>
 <script type="text/javascript">

@@ -1,3 +1,4 @@
+/* RT theme CSS */
 .rt-theme {
    padding-top: 110px;
 }
@@ -61,7 +62,9 @@
    padding-bottom:51px;
 }
 
+/* RT theme CSS */
 
+/* RT Homepage CSS */
 .multi-carousel {
     background: url("/public/images/slider/loader.gif") no-repeat scroll center center transparent;
     height: auto !important;
@@ -101,6 +104,12 @@
    margin-left:5px;
    margin-right:5px;
 }
+
+/* RT Homepage CSS */
+
+/* RT AOTW CSS */
+
+/* RT AOTW CSS */
 
 
 /* CUSTOMIZE THE CAROUSEL
